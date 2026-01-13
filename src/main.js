@@ -3,7 +3,7 @@ import { game, resetGameState } from './GameState.js';
 import { settings, loadSettings, saveSettings } from './Settings.js';
 import { Player, TouhouPlayer } from './Player.js';
 import { EnemyBullet } from './Obstacle.js';
-import { LightFlare, createParticles, drawBackground, updateFloatingParticles, drawFloatingParticles, updatePlayerTrail, drawPlayerTrail, drawFeverOverlay, updateFeverModeClasses, updateStageLights, updateGlowLevel, drawGlitchEffect } from './Graphics.js';
+import { LightFlare, createParticles, drawBackground, updateFloatingParticles, drawFloatingParticles, updatePlayerTrail, drawPlayerTrail, drawFeverOverlay, updateFeverModeClasses, updateStageLights, updateGlowLevel, drawGlitchEffect, drawStagedStagelightOverlay } from './Graphics.js';
 import { loadMusic, loadChartSounds, playNoteSound, playHitSound } from './Audio.js';
 import { loadChart, updateChartSpawning, updateTouhouSpawning, updateCurrentPhase } from './Chart.js';
 import { loadPlaybackFile, processPlaybackActions } from './Playback.js';
@@ -102,7 +102,7 @@ function multiPhaseGameLoop(timestamp) {
     // Run the appropriate game logic based on current phase mode
     if (game.phaseMode === 'touhou') {
         // TOUHOU PHASE - Bullet hell dodge mode
-        drawBackground(ctx);
+        drawBackground(ctx, currentGameTime);
         updateTouhouSpawning(currentGameTime);
 
         // Update bullet spawners
@@ -149,6 +149,9 @@ function multiPhaseGameLoop(timestamp) {
         game.player.update();
         game.player.draw(ctx);
 
+        // Draw staged stagelight overlay to obscure bullets/player in dark areas
+        drawStagedStagelightOverlay(ctx, currentGameTime);
+
         // Draw graze counter
         ctx.save();
         ctx.font = 'bold 20px Arial';
@@ -159,7 +162,7 @@ function multiPhaseGameLoop(timestamp) {
 
     } else {
         // DODGE PHASE - Classic mode logic
-        drawBackground(ctx);
+        drawBackground(ctx, currentGameTime);
         updateChartSpawning(currentGameTime);
 
         // Update and draw obstacles
@@ -217,6 +220,9 @@ function multiPhaseGameLoop(timestamp) {
         // Draw player trail behind player
         drawPlayerTrail(ctx);
         game.player.draw(ctx);
+
+        // Draw staged stagelight overlay to obscure notes/player in dark areas
+        drawStagedStagelightOverlay(ctx, currentGameTime);
     }
 
     // Draw floating particles (behind other effects)
@@ -954,7 +960,8 @@ export function init() {
 
     // Main menu buttons
     document.getElementById('startBtn').addEventListener('click', () => startGame());
-    // document.getElementById('skipToTouhouBtn').addEventListener('click', () => startGameAt(81000));
+    // 66 seconds = 1:06
+    document.getElementById('skipBtn').addEventListener('click', () => startGameAt(66000));
     const creditsBtn = document.getElementById('creditsBtn');
     if (creditsBtn) {
         creditsBtn.addEventListener('click', () => {

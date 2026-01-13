@@ -195,7 +195,7 @@ function applyNightcordStyle(ctx, videoElement) {
 }
 
 // Draw background
-export function drawBackground(ctx) {
+export function drawBackground(ctx, currentTime = 0) {
     // Check if in Fever Mode (glowLevel > 1.5)
     if (game.glowLevel > 1.5 && game.bgVideo && settings.bgVideoEnabled) {
         // Clear opaque black first
@@ -209,8 +209,343 @@ export function drawBackground(ctx) {
         ctx.clearRect(0, 0, CONFIG.WIDTH, CONFIG.HEIGHT);
     }
 
-    // Draw stage lights from top corners
-    drawStageLights(ctx);
+    // Special Staged Stagelight Effect (1:10 - 1:21+)
+    // 70000ms - 82000ms (Extended to allow exit flicker)
+    if (currentTime >= 70000 && currentTime <= 82000 && settings.vfxEnabled) {
+        // Draw standard stage lights behind the "curtains"
+        drawStageLights(ctx);
+        drawStagedStagelight(ctx, currentTime);
+    } else {
+        // Draw stage lights from top corners
+        drawStageLights(ctx);
+    }
+}
+
+// Staged Stagelight Effect (1:10 - 1:21) - styled like implemented stagelights
+function drawStagedStagelight(ctx, currentTime) {
+    const timeInSeconds = currentTime / 1000;
+    const w = CONFIG.WIDTH;
+    const h = CONFIG.HEIGHT;
+
+    // Define States (original movement)
+    // Left Leaning (Screen 1 & 3) /|
+    const stateLeft = {
+        topLeft: 0.35 * w,
+        topRight: 0.65 * w,
+        bottomLeft: 0.05 * w,
+        bottomRight: 0.55 * w
+    };
+
+    // Right Leaning (Screen 2 & 4) |\
+    const stateRight = {
+        topLeft: 0.35 * w,
+        topRight: 0.65 * w,
+        bottomLeft: 0.45 * w,
+        bottomRight: 0.95 * w
+    };
+
+    // Interpolation vars
+    let currentTopLeft, currentTopRight, currentBottomLeft, currentBottomRight;
+    let flickerOpacity = 1.0;
+
+    // Timeline Logic (original)
+    if (timeInSeconds < 71.0) {
+        // 70-71: Entrance Flicker -> Transition to State Left
+        currentTopLeft = stateLeft.topLeft;
+        currentTopRight = stateLeft.topRight;
+        currentBottomLeft = stateLeft.bottomLeft;
+        currentBottomRight = stateLeft.bottomRight;
+
+        // Rapid strobe flicker
+        flickerOpacity = Math.floor(currentTime / 50) % 2 === 0 ? 1.0 : 0.0;
+    }
+    else if (timeInSeconds < 72.0) {
+        // 71-72: Hold Screen 1 (Left)
+        currentTopLeft = stateLeft.topLeft;
+        currentTopRight = stateLeft.topRight;
+        currentBottomLeft = stateLeft.bottomLeft;
+        currentBottomRight = stateLeft.bottomRight;
+        flickerOpacity = 1.0;
+    }
+    else if (timeInSeconds < 73.0) {
+        // 72-73: Swing Left -> Right
+        const t = (timeInSeconds - 72.0) / 1.0;
+        const ease = t * t * (3 - 2 * t); // Smoothstep
+
+        currentTopLeft = lerp(stateLeft.topLeft, stateRight.topLeft, ease);
+        currentTopRight = lerp(stateLeft.topRight, stateRight.topRight, ease);
+        currentBottomLeft = lerp(stateLeft.bottomLeft, stateRight.bottomLeft, ease);
+        currentBottomRight = lerp(stateLeft.bottomRight, stateRight.bottomRight, ease);
+        flickerOpacity = 1.0;
+    }
+    else if (timeInSeconds < 75.0) {
+        // 73-75: Hold Screen 2 (Right)
+        currentTopLeft = stateRight.topLeft;
+        currentTopRight = stateRight.topRight;
+        currentBottomLeft = stateRight.bottomLeft;
+        currentBottomRight = stateRight.bottomRight;
+        flickerOpacity = 1.0;
+    }
+    else if (timeInSeconds < 76.0) {
+        // 75-76: Swing Right -> Left
+        const t = (timeInSeconds - 75.0) / 1.0;
+        const ease = t * t * (3 - 2 * t);
+
+        currentTopLeft = lerp(stateRight.topLeft, stateLeft.topLeft, ease);
+        currentTopRight = lerp(stateRight.topRight, stateLeft.topRight, ease);
+        currentBottomLeft = lerp(stateRight.bottomLeft, stateLeft.bottomLeft, ease);
+        currentBottomRight = lerp(stateRight.bottomRight, stateLeft.bottomRight, ease);
+        flickerOpacity = 1.0;
+    }
+    else if (timeInSeconds < 78.0) {
+        // 76-78: Hold Screen 3 (Left)
+        currentTopLeft = stateLeft.topLeft;
+        currentTopRight = stateLeft.topRight;
+        currentBottomLeft = stateLeft.bottomLeft;
+        currentBottomRight = stateLeft.bottomRight;
+        flickerOpacity = 1.0;
+    }
+    else if (timeInSeconds < 79.0) {
+        // 78-79: Swing Left -> Right
+        const t = (timeInSeconds - 78.0) / 1.0;
+        const ease = t * t * (3 - 2 * t);
+
+        currentTopLeft = lerp(stateLeft.topLeft, stateRight.topLeft, ease);
+        currentTopRight = lerp(stateLeft.topRight, stateRight.topRight, ease);
+        currentBottomLeft = lerp(stateLeft.bottomLeft, stateRight.bottomLeft, ease);
+        currentBottomRight = lerp(stateLeft.bottomRight, stateRight.bottomRight, ease);
+        flickerOpacity = 1.0;
+    }
+    else if (timeInSeconds < 81.0) {
+        // 79-81: Hold Screen 4 (Right)
+        currentTopLeft = stateRight.topLeft;
+        currentTopRight = stateRight.topRight;
+        currentBottomLeft = stateRight.bottomLeft;
+        currentBottomRight = stateRight.bottomRight;
+        flickerOpacity = 1.0;
+    }
+    else if (timeInSeconds < 82.0) {
+        // 81-82: Exit Flicker (Right)
+        currentTopLeft = stateRight.topLeft;
+        currentTopRight = stateRight.topRight;
+        currentBottomLeft = stateRight.bottomLeft;
+        currentBottomRight = stateRight.bottomRight;
+
+        // Rapid strobe to exit
+        const strobe = Math.floor(currentTime / 50) % 2 === 0 ? 1 : 0;
+        flickerOpacity = strobe * 1.0;
+    } else {
+        flickerOpacity = 0;
+    }
+
+    if (flickerOpacity <= 0.01) return;
+
+    // Dynamic color based on glow level (same as implemented stagelights)
+    let r, g, b;
+    if (game.glowLevel > 1.5) {
+        // Fever mode: cyan/blue
+        r = 50;
+        g = 150 + Math.floor(Math.sin(Date.now() * 0.002) * 50);
+        b = 255;
+    } else if (game.glowLevel > 0.5) {
+        // Build-up mode: blend from red to purple/blue
+        const blend = (game.glowLevel - 0.5) * 2;
+        r = Math.floor(255 * (1 - blend * 0.5));
+        g = Math.floor(100 * blend);
+        b = Math.floor(200 * blend);
+    } else {
+        // Normal mode: dark red/black
+        r = game.stageLightColor === 'darkred' ? 255 : 0;
+        g = 0;
+        b = 0;
+    }
+
+    const intensity = game.stageLightIntensity || 1.0;
+    const opacityMultiplier = 1 + game.glowLevel * 0.3;
+
+    ctx.save();
+
+    // Draw the light beam first (the lit trapezoid area in the center)
+    ctx.filter = 'blur(8px)';
+
+    // Calculate center points for gradient
+    const topCenterX = (currentTopLeft + currentTopRight) / 2;
+    const bottomCenterX = (currentBottomLeft + currentBottomRight) / 2;
+
+    // Create gradient from top to bottom of the beam
+    const beamGradient = ctx.createLinearGradient(topCenterX, 0, bottomCenterX, h);
+    beamGradient.addColorStop(0, `rgba(${r}, ${g}, ${b}, ${0.3 * intensity * opacityMultiplier * flickerOpacity})`);
+    beamGradient.addColorStop(0.4, `rgba(${r}, ${g}, ${b}, ${0.2 * intensity * opacityMultiplier * flickerOpacity})`);
+    beamGradient.addColorStop(1, `rgba(${r}, ${g}, ${b}, 0)`);
+
+    // Draw the spotlight beam (simple trapezoid, no edges)
+    ctx.fillStyle = beamGradient;
+    ctx.beginPath();
+    ctx.moveTo(currentTopLeft, 0);
+    ctx.lineTo(currentTopRight, 0);
+    ctx.lineTo(currentBottomRight, h);
+    ctx.lineTo(currentBottomLeft, h);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.filter = 'none';
+
+    // Draw the dark panels (left and right) - solid black to completely obscure
+    ctx.fillStyle = `rgba(0, 0, 0, ${flickerOpacity})`;
+
+    // Draw Left Panel (Obscures left side completely)
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(currentTopLeft, 0);
+    ctx.lineTo(currentBottomLeft, h);
+    ctx.lineTo(0, h);
+    ctx.closePath();
+    ctx.fill();
+
+    // Draw Right Panel (Obscures right side completely)
+    ctx.beginPath();
+    ctx.moveTo(currentTopRight, 0);
+    ctx.lineTo(w, 0);
+    ctx.lineTo(w, h);
+    ctx.lineTo(currentBottomRight, h);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.restore();
+}
+
+// Draw the dark obscuring panels for staged stagelight (called after player/notes to obscure them)
+export function drawStagedStagelightOverlay(ctx, currentTime) {
+    if (!settings.vfxEnabled) return;
+
+    // Only active during 70000ms - 82000ms
+    if (currentTime < 70000 || currentTime > 82000) return;
+
+    const timeInSeconds = currentTime / 1000;
+    const w = CONFIG.WIDTH;
+    const h = CONFIG.HEIGHT;
+
+    // Define States (same as drawStagedStagelight)
+    const stateLeft = {
+        topLeft: 0.35 * w,
+        topRight: 0.65 * w,
+        bottomLeft: 0.05 * w,
+        bottomRight: 0.55 * w
+    };
+
+    const stateRight = {
+        topLeft: 0.35 * w,
+        topRight: 0.65 * w,
+        bottomLeft: 0.45 * w,
+        bottomRight: 0.95 * w
+    };
+
+    let currentTopLeft, currentTopRight, currentBottomLeft, currentBottomRight;
+    let flickerOpacity = 1.0;
+
+    // Timeline Logic (same as drawStagedStagelight)
+    if (timeInSeconds < 71.0) {
+        currentTopLeft = stateLeft.topLeft;
+        currentTopRight = stateLeft.topRight;
+        currentBottomLeft = stateLeft.bottomLeft;
+        currentBottomRight = stateLeft.bottomRight;
+        flickerOpacity = Math.floor(currentTime / 50) % 2 === 0 ? 1.0 : 0.0;
+    }
+    else if (timeInSeconds < 72.0) {
+        currentTopLeft = stateLeft.topLeft;
+        currentTopRight = stateLeft.topRight;
+        currentBottomLeft = stateLeft.bottomLeft;
+        currentBottomRight = stateLeft.bottomRight;
+        flickerOpacity = 1.0;
+    }
+    else if (timeInSeconds < 73.0) {
+        const t = (timeInSeconds - 72.0) / 1.0;
+        const ease = t * t * (3 - 2 * t);
+        currentTopLeft = lerp(stateLeft.topLeft, stateRight.topLeft, ease);
+        currentTopRight = lerp(stateLeft.topRight, stateRight.topRight, ease);
+        currentBottomLeft = lerp(stateLeft.bottomLeft, stateRight.bottomLeft, ease);
+        currentBottomRight = lerp(stateLeft.bottomRight, stateRight.bottomRight, ease);
+        flickerOpacity = 1.0;
+    }
+    else if (timeInSeconds < 75.0) {
+        currentTopLeft = stateRight.topLeft;
+        currentTopRight = stateRight.topRight;
+        currentBottomLeft = stateRight.bottomLeft;
+        currentBottomRight = stateRight.bottomRight;
+        flickerOpacity = 1.0;
+    }
+    else if (timeInSeconds < 76.0) {
+        const t = (timeInSeconds - 75.0) / 1.0;
+        const ease = t * t * (3 - 2 * t);
+        currentTopLeft = lerp(stateRight.topLeft, stateLeft.topLeft, ease);
+        currentTopRight = lerp(stateRight.topRight, stateLeft.topRight, ease);
+        currentBottomLeft = lerp(stateRight.bottomLeft, stateLeft.bottomLeft, ease);
+        currentBottomRight = lerp(stateRight.bottomRight, stateLeft.bottomRight, ease);
+        flickerOpacity = 1.0;
+    }
+    else if (timeInSeconds < 78.0) {
+        currentTopLeft = stateLeft.topLeft;
+        currentTopRight = stateLeft.topRight;
+        currentBottomLeft = stateLeft.bottomLeft;
+        currentBottomRight = stateLeft.bottomRight;
+        flickerOpacity = 1.0;
+    }
+    else if (timeInSeconds < 79.0) {
+        const t = (timeInSeconds - 78.0) / 1.0;
+        const ease = t * t * (3 - 2 * t);
+        currentTopLeft = lerp(stateLeft.topLeft, stateRight.topLeft, ease);
+        currentTopRight = lerp(stateLeft.topRight, stateRight.topRight, ease);
+        currentBottomLeft = lerp(stateLeft.bottomLeft, stateRight.bottomLeft, ease);
+        currentBottomRight = lerp(stateLeft.bottomRight, stateRight.bottomRight, ease);
+        flickerOpacity = 1.0;
+    }
+    else if (timeInSeconds < 81.0) {
+        currentTopLeft = stateRight.topLeft;
+        currentTopRight = stateRight.topRight;
+        currentBottomLeft = stateRight.bottomLeft;
+        currentBottomRight = stateRight.bottomRight;
+        flickerOpacity = 1.0;
+    }
+    else if (timeInSeconds < 82.0) {
+        currentTopLeft = stateRight.topLeft;
+        currentTopRight = stateRight.topRight;
+        currentBottomLeft = stateRight.bottomLeft;
+        currentBottomRight = stateRight.bottomRight;
+        const strobe = Math.floor(currentTime / 50) % 2 === 0 ? 1 : 0;
+        flickerOpacity = strobe * 1.0;
+    } else {
+        flickerOpacity = 0;
+    }
+
+    if (flickerOpacity <= 0.01) return;
+
+    ctx.save();
+
+    // Draw semi-transparent dark panels to obscure notes and player
+    // Use blur to soften the edges
+    ctx.filter = 'blur(6px)';
+    ctx.fillStyle = `rgba(0, 0, 0, ${flickerOpacity * 0.9})`;
+
+    // Draw Left Panel
+    ctx.beginPath();
+    ctx.moveTo(-10, 0);
+    ctx.lineTo(currentTopLeft, 0);
+    ctx.lineTo(currentBottomLeft, h);
+    ctx.lineTo(-10, h);
+    ctx.closePath();
+    ctx.fill();
+
+    // Draw Right Panel
+    ctx.beginPath();
+    ctx.moveTo(currentTopRight, 0);
+    ctx.lineTo(w + 10, 0);
+    ctx.lineTo(w + 10, h);
+    ctx.lineTo(currentBottomRight, h);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.filter = 'none';
+    ctx.restore();
 }
 
 // Floating particle class for fever mode ambiance
