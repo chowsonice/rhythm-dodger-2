@@ -3,7 +3,7 @@ import { game, resetGameState } from './GameState.js';
 import { settings, loadSettings, saveSettings } from './Settings.js';
 import { Player, TouhouPlayer } from './Player.js';
 import { EnemyBullet } from './Obstacle.js';
-import { LightFlare, createParticles, drawBackground, updateFloatingParticles, drawFloatingParticles, updatePlayerTrail, drawPlayerTrail, drawFeverOverlay, updateFeverModeClasses, updateStageLights, updateGlowLevel, drawGlitchEffect, drawStagedStagelightOverlay } from './Graphics.js';
+import { LightFlare, Particle, createParticles, drawBackground, updateFloatingParticles, drawFloatingParticles, updatePlayerTrail, drawPlayerTrail, drawFeverOverlay, updateFeverModeClasses, updateStageLights, updateGlowLevel, drawGlitchEffect, drawStagedStagelightOverlay } from './Graphics.js';
 import { loadMusic, loadChartSounds, playNoteSound, playHitSound } from './Audio.js';
 import { loadChart, updateChartSpawning, updateTouhouSpawning, updateCurrentPhase } from './Chart.js';
 import { loadPlaybackFile, processPlaybackActions } from './Playback.js';
@@ -235,7 +235,7 @@ function multiPhaseGameLoop(timestamp) {
         particle.draw(ctx);
         if (particle.isDead()) {
             game.particles.splice(i, 1);
-            import('./Graphics.js').then(m => m.Particle.release(particle));
+            Particle.release(particle);
         }
     }
 

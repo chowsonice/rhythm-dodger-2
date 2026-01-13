@@ -7,6 +7,22 @@ const pixelCanvas = document.createElement('canvas');
 const pixelCtx = pixelCanvas.getContext('2d', { willReadFrequently: false }); // Optimize for GPU drawing
 const PIXEL_SIZE = 4; // Higher number = more pixelated
 
+// Pre-rendered scanline pattern for performance
+let scanlineCanvas = null;
+function getScanlineCanvas(width, height) {
+    if (!scanlineCanvas || scanlineCanvas.width !== width || scanlineCanvas.height !== height) {
+        scanlineCanvas = document.createElement('canvas');
+        scanlineCanvas.width = width;
+        scanlineCanvas.height = height;
+        const ctx = scanlineCanvas.getContext('2d');
+        ctx.fillStyle = '#000';
+        for (let y = 0; y < height; y += 4) {
+            ctx.fillRect(0, y, width, 2);
+        }
+    }
+    return scanlineCanvas;
+}
+
 // LightFlare class for collision effect
 export class LightFlare {
     constructor(x, y) {
@@ -182,14 +198,10 @@ function applyNightcordStyle(ctx, videoElement) {
     ctx.globalAlpha = 0.4;
     ctx.fillRect(0, 0, w, h);
 
-    // 3. Scanlines (optional - reusing existing CSS or adding canvas overlay)
-    // Canvas scanlines for integrated feel
+    // 3. Scanlines - use pre-rendered pattern for performance
     ctx.globalCompositeOperation = 'source-over';
     ctx.globalAlpha = 0.2;
-    ctx.fillStyle = '#000';
-    for(let y=0; y<h; y+=4) {
-        ctx.fillRect(0, y, w, 2);
-    }
+    ctx.drawImage(getScanlineCanvas(w, h), 0, 0);
 
     ctx.restore();
 }
@@ -622,16 +634,21 @@ export function updateFloatingParticles() {
         }
     }
 
-    // Point game.floatingParticles to active particles for drawing
-    game.floatingParticles = particlePool.filter(p => p.active);
+    // Store active count for drawing instead of creating a new array
+    game.floatingParticleCount = targetCount;
 }
 
 // Draw floating particles
 export function drawFloatingParticles(ctx) {
     if (!settings.vfxEnabled || game.glowLevel < 0.3) return;
 
-    for (const particle of game.floatingParticles) {
-        particle.draw(ctx, game.glowLevel);
+    // Iterate directly over pool using the count instead of a filtered array
+    const count = game.floatingParticleCount || 0;
+    for (let i = 0; i < count; i++) {
+        const particle = particlePool[i];
+        if (particle.active) {
+            particle.draw(ctx, game.glowLevel);
+        }
     }
 }
 
@@ -760,6 +777,10 @@ let stageLightFrameCount = 0;
 let lastStageLightIntensity = 0;
 let lastStageLightRotation = 0;
 
+// Temporary canvas for unblurred rays (blur applied once at the end)
+let stageLightTempCanvas = null;
+let stageLightTempCtx = null;
+
 // Draw stage lights effect with multiple rays
 export function drawStageLights(ctx) {
     if (!settings.vfxEnabled) return;
@@ -796,7 +817,18 @@ export function drawStageLights(ctx) {
 
 // Internal function to render stage lights to a context
 function renderStageLightsToContext(ctx) {
-    ctx.save();
+    // Initialize or reuse temp canvas for unblurred rays
+    if (!stageLightTempCanvas) {
+        stageLightTempCanvas = document.createElement('canvas');
+        stageLightTempCanvas.width = CONFIG.WIDTH;
+        stageLightTempCanvas.height = CONFIG.HEIGHT;
+        stageLightTempCtx = stageLightTempCanvas.getContext('2d');
+    }
+
+    // Clear temp canvas
+    stageLightTempCtx.clearRect(0, 0, CONFIG.WIDTH, CONFIG.HEIGHT);
+
+    stageLightTempCtx.save();
 
     // Intensity multiplier for brightness - enhanced by glow level
     const baseIntensity = game.stageLightIntensity;
@@ -809,7 +841,7 @@ function renderStageLightsToContext(ctx) {
     // Get current rotation - faster at higher glow levels
     const rotation = game.stageLightRotation;
 
-    // Helper function to draw a single light cone ray
+    // Helper function to draw a single light cone ray (WITHOUT blur - blur applied once at end)
     function drawRay(originX, originY, angle, length) {
         const rayStartWidth = 50 + game.glowLevel * 10; // Wider at higher glow
         const rayEndWidth = 200 + game.glowLevel * 50; // Wider spread at higher glow
@@ -857,23 +889,21 @@ function renderStageLightsToContext(ctx) {
 
         // Create gradient along the ray - enhanced opacity at higher glow levels
         const opacityMultiplier = 1 + game.glowLevel * 0.3;
-        const gradient = ctx.createLinearGradient(originX, originY, endX, endY);
+        const gradient = stageLightTempCtx.createLinearGradient(originX, originY, endX, endY);
         gradient.addColorStop(0, `rgba(${r}, ${g}, ${b}, ${0.15 * intensity * opacityMultiplier})`);
         gradient.addColorStop(0.3, `rgba(${r}, ${g}, ${b}, ${0.1 * intensity * opacityMultiplier})`);
         gradient.addColorStop(0.7, `rgba(${r}, ${g}, ${b}, ${0.05 * intensity * opacityMultiplier})`);
         gradient.addColorStop(1, `rgba(${r}, ${g}, ${b}, 0)`);
 
-        // Apply blur filter for softer edges (reduced for performance)
-        ctx.filter = 'blur(8px)';
-        ctx.fillStyle = gradient;
-        ctx.beginPath();
-        ctx.moveTo(startLeftX, startLeftY);
-        ctx.lineTo(endLeftX, endLeftY);
-        ctx.lineTo(endRightX, endRightY);
-        ctx.lineTo(startRightX, startRightY);
-        ctx.closePath();
-        ctx.fill();
-        ctx.filter = 'none'; // Reset filter
+        // Draw ray WITHOUT blur (blur applied once at end for performance)
+        stageLightTempCtx.fillStyle = gradient;
+        stageLightTempCtx.beginPath();
+        stageLightTempCtx.moveTo(startLeftX, startLeftY);
+        stageLightTempCtx.lineTo(endLeftX, endLeftY);
+        stageLightTempCtx.lineTo(endRightX, endRightY);
+        stageLightTempCtx.lineTo(startRightX, startRightY);
+        stageLightTempCtx.closePath();
+        stageLightTempCtx.fill();
     }
 
     // Left corner setup
@@ -914,6 +944,13 @@ function renderStageLightsToContext(ctx) {
         drawRay(originX, originY, arcAngle, rayLength);
     }
 
+    stageLightTempCtx.restore();
+
+    // Apply blur ONCE to the entire result and draw to output context
+    ctx.save();
+    ctx.filter = 'blur(8px)';
+    ctx.drawImage(stageLightTempCanvas, 0, 0);
+    ctx.filter = 'none';
     ctx.restore();
 }
 
@@ -1037,8 +1074,8 @@ export function drawGlitchEffect(ctx) {
 
     ctx.save();
 
-    // 1. Horizontal Tearing/Slicing
-    const numSlices = Math.floor(20 * intensity);
+    // 1. Horizontal Tearing/Slicing - capped at 10 for performance
+    const numSlices = Math.min(10, Math.floor(20 * intensity));
     for (let i = 0; i < numSlices; i++) {
         const sliceH = Math.random() * 50 * intensity;
         const sliceY = Math.random() * h;
