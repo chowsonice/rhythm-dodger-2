@@ -1,0 +1,4518 @@
+{
+    "title": "BAKENOHANA",
+    "bpm": 180,
+    "music": "audio.ogg?v=1766308745",
+    "sounds": {
+        "normal": "osu-chart/osu-chart/soft-hitnormal.ogg",
+        "special": "osu-chart/osu-chart/soft-hitwhistle.ogg",
+        "special2": "osu-chart/osu-chart/soft-hitclap10.ogg"
+    },
+    "phases": [
+        {
+            "type": "dodge",
+            "startTime": 0,
+            "endTime": 15000,
+            "intensity": 0,
+            "slides": [
+                {
+                    "lane": 0,
+                    "startTime": 1075,
+                    "endTime": 1333
+                },
+                {
+                    "lane": 4,
+                    "startTime": 1408,
+                    "endTime": 1494
+                },
+                {
+                    "lane": 4,
+                    "startTime": 1574,
+                    "endTime": 1832
+                },
+                {
+                    "lane": 4,
+                    "startTime": 1908,
+                    "endTime": 1994
+                },
+                {
+                    "lane": 7,
+                    "startTime": 2074,
+                    "endTime": 2332
+                },
+                {
+                    "lane": 5,
+                    "startTime": 2408,
+                    "endTime": 2796
+                },
+                {
+                    "lane": 7,
+                    "startTime": 2741,
+                    "endTime": 2810
+                },
+                {
+                    "lane": 8,
+                    "startTime": 2908,
+                    "endTime": 3058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 8,
+                    "startTime": 2991,
+                    "endTime": 3141
+                },
+                {
+                    "lane": 8,
+                    "startTime": 3074,
+                    "endTime": 3224
+                },
+                {
+                    "lane": 9,
+                    "startTime": 3241,
+                    "endTime": 3391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 8,
+                    "startTime": 3408,
+                    "endTime": 3558
+                },
+                {
+                    "lane": 9,
+                    "startTime": 3491,
+                    "endTime": 3641
+                },
+                {
+                    "lane": 9,
+                    "startTime": 3574,
+                    "endTime": 3724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 9,
+                    "startTime": 3658,
+                    "endTime": 3808
+                },
+                {
+                    "lane": 9,
+                    "startTime": 3741,
+                    "endTime": 3891
+                },
+                {
+                    "lane": 9,
+                    "startTime": 3908,
+                    "endTime": 3925
+                },
+                {
+                    "lane": 7,
+                    "startTime": 4074,
+                    "endTime": 4143
+                },
+                {
+                    "lane": 9,
+                    "startTime": 4241,
+                    "endTime": 4391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 9,
+                    "startTime": 4324,
+                    "endTime": 4474
+                },
+                {
+                    "lane": 9,
+                    "startTime": 4408,
+                    "endTime": 4558
+                },
+                {
+                    "lane": 8,
+                    "startTime": 4574,
+                    "endTime": 4724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 5,
+                    "startTime": 4741,
+                    "endTime": 4891
+                },
+                {
+                    "lane": 4,
+                    "startTime": 4908,
+                    "endTime": 5058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 3,
+                    "startTime": 4991,
+                    "endTime": 5141
+                },
+                {
+                    "lane": 3,
+                    "startTime": 5074,
+                    "endTime": 5281
+                },
+                {
+                    "lane": 0,
+                    "startTime": 5408,
+                    "endTime": 5477
+                },
+                {
+                    "lane": 3,
+                    "startTime": 5574,
+                    "endTime": 5724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 3,
+                    "startTime": 5658,
+                    "endTime": 5808
+                },
+                {
+                    "lane": 3,
+                    "startTime": 5741,
+                    "endTime": 5891
+                },
+                {
+                    "lane": 2,
+                    "startTime": 5908,
+                    "endTime": 6058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 1,
+                    "startTime": 6074,
+                    "endTime": 6224
+                },
+                {
+                    "lane": 1,
+                    "startTime": 6158,
+                    "endTime": 6308
+                },
+                {
+                    "lane": 1,
+                    "startTime": 6241,
+                    "endTime": 6391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 1,
+                    "startTime": 6324,
+                    "endTime": 6474
+                },
+                {
+                    "lane": 0,
+                    "startTime": 6408,
+                    "endTime": 6558
+                },
+                {
+                    "lane": 0,
+                    "startTime": 6574,
+                    "endTime": 6591
+                },
+                {
+                    "lane": 2,
+                    "startTime": 6741,
+                    "endTime": 6810
+                },
+                {
+                    "lane": 4,
+                    "startTime": 6908,
+                    "endTime": 7058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 4,
+                    "startTime": 6991,
+                    "endTime": 7141
+                },
+                {
+                    "lane": 4,
+                    "startTime": 7074,
+                    "endTime": 7224
+                },
+                {
+                    "lane": 4,
+                    "startTime": 7241,
+                    "endTime": 7391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 2,
+                    "startTime": 7408,
+                    "endTime": 7511
+                },
+                {
+                    "lane": 3,
+                    "startTime": 7741,
+                    "endTime": 8129
+                },
+                {
+                    "lane": 2,
+                    "startTime": 8074,
+                    "endTime": 8143
+                },
+                {
+                    "lane": 4,
+                    "startTime": 8241,
+                    "endTime": 8391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 5,
+                    "startTime": 8324,
+                    "endTime": 8474
+                },
+                {
+                    "lane": 5,
+                    "startTime": 8407,
+                    "endTime": 8557
+                },
+                {
+                    "lane": 6,
+                    "startTime": 8574,
+                    "endTime": 8724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 7,
+                    "startTime": 8741,
+                    "endTime": 8891
+                },
+                {
+                    "lane": 7,
+                    "startTime": 8824,
+                    "endTime": 8974
+                },
+                {
+                    "lane": 7,
+                    "startTime": 8908,
+                    "endTime": 9058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 7,
+                    "startTime": 8991,
+                    "endTime": 9141
+                },
+                {
+                    "lane": 6,
+                    "startTime": 9074,
+                    "endTime": 9224
+                },
+                {
+                    "lane": 8,
+                    "startTime": 9241,
+                    "endTime": 9258
+                },
+                {
+                    "lane": 9,
+                    "startTime": 9408,
+                    "endTime": 9477
+                },
+                {
+                    "lane": 9,
+                    "startTime": 9574,
+                    "endTime": 9724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 9,
+                    "startTime": 9657,
+                    "endTime": 9807
+                },
+                {
+                    "lane": 9,
+                    "startTime": 9741,
+                    "endTime": 9891
+                },
+                {
+                    "lane": 8,
+                    "startTime": 9907,
+                    "endTime": 10057,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 9,
+                    "startTime": 10074,
+                    "endTime": 10224
+                },
+                {
+                    "lane": 7,
+                    "startTime": 10241,
+                    "endTime": 10391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 7,
+                    "startTime": 10324,
+                    "endTime": 10474
+                },
+                {
+                    "lane": 6,
+                    "startTime": 10407,
+                    "endTime": 10614
+                },
+                {
+                    "lane": 3,
+                    "startTime": 10741,
+                    "endTime": 10810
+                },
+                {
+                    "lane": 0,
+                    "startTime": 10907,
+                    "endTime": 11057,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 10991,
+                    "endTime": 11141
+                },
+                {
+                    "lane": 0,
+                    "startTime": 11074,
+                    "endTime": 11224
+                },
+                {
+                    "lane": 1,
+                    "startTime": 11241,
+                    "endTime": 11391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 2,
+                    "startTime": 11407,
+                    "endTime": 11557
+                },
+                {
+                    "lane": 2,
+                    "startTime": 11491,
+                    "endTime": 11641
+                },
+                {
+                    "lane": 2,
+                    "startTime": 11574,
+                    "endTime": 11724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 2,
+                    "startTime": 11657,
+                    "endTime": 11807
+                },
+                {
+                    "lane": 2,
+                    "startTime": 11741,
+                    "endTime": 11891
+                },
+                {
+                    "lane": 0,
+                    "startTime": 11908,
+                    "endTime": 11925
+                },
+                {
+                    "lane": 2,
+                    "startTime": 12074,
+                    "endTime": 12143
+                },
+                {
+                    "lane": 4,
+                    "startTime": 12241,
+                    "endTime": 12391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 5,
+                    "startTime": 12324,
+                    "endTime": 12474
+                },
+                {
+                    "lane": 5,
+                    "startTime": 12407,
+                    "endTime": 12557
+                },
+                {
+                    "lane": 4,
+                    "startTime": 12574,
+                    "endTime": 12724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 4,
+                    "startTime": 12741,
+                    "endTime": 13086
+                },
+                {
+                    "lane": 5,
+                    "startTime": 14408,
+                    "endTime": 14558,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 6,
+                    "startTime": 14574,
+                    "endTime": 14724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 9,
+                    "startTime": 14741,
+                    "endTime": 14879
+                }
+            ]
+        },
+        {
+            "type": "dodge",
+            "startTime": 15000,
+            "endTime": 30000,
+            "intensity": 0,
+            "slides": [
+                {
+                    "lane": 9,
+                    "startTime": 15074,
+                    "endTime": 15212
+                },
+                {
+                    "lane": 7,
+                    "startTime": 15408,
+                    "endTime": 15558
+                },
+                {
+                    "lane": 7,
+                    "startTime": 15491,
+                    "endTime": 15641
+                },
+                {
+                    "lane": 6,
+                    "startTime": 15574,
+                    "endTime": 15712
+                },
+                {
+                    "lane": 5,
+                    "startTime": 16074,
+                    "endTime": 16224,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 3,
+                    "startTime": 16241,
+                    "endTime": 16391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 3,
+                    "startTime": 16408,
+                    "endTime": 16546
+                },
+                {
+                    "lane": 3,
+                    "startTime": 16741,
+                    "endTime": 16891
+                },
+                {
+                    "lane": 2,
+                    "startTime": 16908,
+                    "endTime": 17058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 1,
+                    "startTime": 17074,
+                    "endTime": 17224,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 17241,
+                    "endTime": 17379
+                },
+                {
+                    "lane": 1,
+                    "startTime": 17574,
+                    "endTime": 17712
+                },
+                {
+                    "lane": 0,
+                    "startTime": 17908,
+                    "endTime": 18058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 18074,
+                    "endTime": 18224,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 3,
+                    "startTime": 18241,
+                    "endTime": 18379
+                },
+                {
+                    "lane": 0,
+                    "startTime": 18574,
+                    "endTime": 18850
+                },
+                {
+                    "lane": 2,
+                    "startTime": 18991,
+                    "endTime": 19141
+                },
+                {
+                    "lane": 2,
+                    "startTime": 19074,
+                    "endTime": 19224
+                },
+                {
+                    "lane": 1,
+                    "startTime": 19241,
+                    "endTime": 19391
+                },
+                {
+                    "lane": 5,
+                    "startTime": 19408,
+                    "endTime": 19558
+                },
+                {
+                    "lane": 3,
+                    "startTime": 19741,
+                    "endTime": 19891,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 5,
+                    "startTime": 19908,
+                    "endTime": 20058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 3,
+                    "startTime": 20074,
+                    "endTime": 20212
+                },
+                {
+                    "lane": 8,
+                    "startTime": 20408,
+                    "endTime": 20546
+                },
+                {
+                    "lane": 5,
+                    "startTime": 20741,
+                    "endTime": 20891
+                },
+                {
+                    "lane": 5,
+                    "startTime": 20824,
+                    "endTime": 20974
+                },
+                {
+                    "lane": 5,
+                    "startTime": 20907,
+                    "endTime": 21045
+                },
+                {
+                    "lane": 2,
+                    "startTime": 21241,
+                    "endTime": 21391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 21408,
+                    "endTime": 21558,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 1,
+                    "startTime": 21574,
+                    "endTime": 21712
+                },
+                {
+                    "lane": 2,
+                    "startTime": 21908,
+                    "endTime": 22046
+                },
+                {
+                    "lane": 5,
+                    "startTime": 22241,
+                    "endTime": 22517
+                },
+                {
+                    "lane": 7,
+                    "startTime": 22741,
+                    "endTime": 22879
+                },
+                {
+                    "lane": 9,
+                    "startTime": 23074,
+                    "endTime": 23212
+                },
+                {
+                    "lane": 6,
+                    "startTime": 23408,
+                    "endTime": 23558,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 8,
+                    "startTime": 23574,
+                    "endTime": 23724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 5,
+                    "startTime": 23741,
+                    "endTime": 23891,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 3,
+                    "startTime": 23908,
+                    "endTime": 24058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 4,
+                    "startTime": 24074,
+                    "endTime": 24224,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 6,
+                    "startTime": 24241,
+                    "endTime": 24391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 1,
+                    "startTime": 24408,
+                    "endTime": 24615
+                },
+                {
+                    "lane": 3,
+                    "startTime": 24741,
+                    "endTime": 24844
+                },
+                {
+                    "lane": 0,
+                    "startTime": 24908,
+                    "endTime": 25011
+                },
+                {
+                    "lane": 2,
+                    "startTime": 25074,
+                    "endTime": 25203
+                },
+                {
+                    "lane": 0,
+                    "startTime": 25408,
+                    "endTime": 25558,
+                    "noteType": "special2"
+                },
+                {
+                    "lane": 3,
+                    "startTime": 25658,
+                    "endTime": 25808
+                },
+                {
+                    "lane": 3,
+                    "startTime": 25741,
+                    "endTime": 25891
+                },
+                {
+                    "lane": 1,
+                    "startTime": 25908,
+                    "endTime": 26058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 5,
+                    "startTime": 26074,
+                    "endTime": 26224,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 6,
+                    "startTime": 26241,
+                    "endTime": 26391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 6,
+                    "startTime": 26574,
+                    "endTime": 26724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 6,
+                    "startTime": 26741,
+                    "endTime": 26891,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 8,
+                    "startTime": 26908,
+                    "endTime": 27058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 9,
+                    "startTime": 27074,
+                    "endTime": 27224,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 7,
+                    "startTime": 27297,
+                    "endTime": 27447
+                },
+                {
+                    "lane": 5,
+                    "startTime": 27519,
+                    "endTime": 27669,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 1,
+                    "startTime": 27741,
+                    "endTime": 27982
+                },
+                {
+                    "lane": 3,
+                    "startTime": 28241,
+                    "endTime": 28301
+                },
+                {
+                    "lane": 1,
+                    "startTime": 28408,
+                    "endTime": 28528
+                },
+                {
+                    "lane": 3,
+                    "startTime": 28741,
+                    "endTime": 28891
+                },
+                {
+                    "lane": 4,
+                    "startTime": 28908,
+                    "endTime": 29058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 7,
+                    "startTime": 29074,
+                    "endTime": 29224,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 6,
+                    "startTime": 29241,
+                    "endTime": 29391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 6,
+                    "startTime": 29408,
+                    "endTime": 29558,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 8,
+                    "startTime": 29574,
+                    "endTime": 29694
+                }
+            ]
+        },
+        {
+            "type": "dodge",
+            "startTime": 30000,
+            "endTime": 40000,
+            "intensity": 1,
+            "slides": [
+                {
+                    "lane": 9,
+                    "startTime": 30074,
+                    "endTime": 30194
+                },
+                {
+                    "lane": 8,
+                    "startTime": 30408,
+                    "endTime": 30528
+                },
+                {
+                    "lane": 9,
+                    "startTime": 30741,
+                    "endTime": 30891,
+                    "noteType": "special2"
+                },
+                {
+                    "lane": 8,
+                    "startTime": 30908,
+                    "endTime": 31058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 4,
+                    "startTime": 31074,
+                    "endTime": 31224,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 5,
+                    "startTime": 31241,
+                    "endTime": 31361
+                },
+                {
+                    "lane": 7,
+                    "startTime": 31574,
+                    "endTime": 31724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 6,
+                    "startTime": 31741,
+                    "endTime": 31891,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 3,
+                    "startTime": 31908,
+                    "endTime": 32058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 32074,
+                    "endTime": 32224,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 3,
+                    "startTime": 32241,
+                    "endTime": 32422
+                },
+                {
+                    "lane": 0,
+                    "startTime": 32574,
+                    "endTime": 32643
+                },
+                {
+                    "lane": 4,
+                    "startTime": 32741,
+                    "endTime": 32810
+                },
+                {
+                    "lane": 1,
+                    "startTime": 32908,
+                    "endTime": 32977
+                },
+                {
+                    "lane": 6,
+                    "startTime": 33074,
+                    "endTime": 33281
+                },
+                {
+                    "lane": 5,
+                    "startTime": 33408,
+                    "endTime": 33615
+                },
+                {
+                    "lane": 7,
+                    "startTime": 33741,
+                    "endTime": 33891
+                },
+                {
+                    "lane": 5,
+                    "startTime": 33908,
+                    "endTime": 34058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 3,
+                    "startTime": 34074,
+                    "endTime": 34224,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 3,
+                    "startTime": 34241,
+                    "endTime": 34391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 34408,
+                    "endTime": 34494
+                },
+                {
+                    "lane": 2,
+                    "startTime": 34741,
+                    "endTime": 34861
+                },
+                {
+                    "lane": 7,
+                    "startTime": 35074,
+                    "endTime": 35246
+                },
+                {
+                    "lane": 1,
+                    "startTime": 35408,
+                    "endTime": 35558
+                },
+                {
+                    "lane": 2,
+                    "startTime": 35574,
+                    "endTime": 35591
+                },
+                {
+                    "lane": 0,
+                    "startTime": 35741,
+                    "endTime": 36129
+                },
+                {
+                    "lane": 4,
+                    "startTime": 36074,
+                    "endTime": 36177
+                },
+                {
+                    "lane": 5,
+                    "startTime": 36241,
+                    "endTime": 36344
+                },
+                {
+                    "lane": 6,
+                    "startTime": 36408,
+                    "endTime": 36796
+                },
+                {
+                    "lane": 7,
+                    "startTime": 36741,
+                    "endTime": 36844
+                },
+                {
+                    "lane": 9,
+                    "startTime": 36908,
+                    "endTime": 37011
+                },
+                {
+                    "lane": 6,
+                    "startTime": 37074,
+                    "endTime": 37384
+                },
+                {
+                    "lane": 9,
+                    "startTime": 37408,
+                    "endTime": 37558,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 8,
+                    "startTime": 37574,
+                    "endTime": 37746
+                },
+                {
+                    "lane": 3,
+                    "startTime": 37908,
+                    "endTime": 37977
+                },
+                {
+                    "lane": 2,
+                    "startTime": 38074,
+                    "endTime": 38160
+                },
+                {
+                    "lane": 0,
+                    "startTime": 38241,
+                    "endTime": 38344
+                },
+                {
+                    "lane": 2,
+                    "startTime": 38408,
+                    "endTime": 38796
+                },
+                {
+                    "lane": 3,
+                    "startTime": 38741,
+                    "endTime": 38844
+                },
+                {
+                    "lane": 1,
+                    "startTime": 38908,
+                    "endTime": 39011
+                },
+                {
+                    "lane": 5,
+                    "startTime": 39074,
+                    "endTime": 39384
+                },
+                {
+                    "lane": 4,
+                    "startTime": 39408,
+                    "endTime": 39511
+                },
+                {
+                    "lane": 5,
+                    "startTime": 39574,
+                    "endTime": 39643
+                },
+                {
+                    "lane": 5,
+                    "startTime": 39741,
+                    "endTime": 39810
+                },
+                {
+                    "lane": 7,
+                    "startTime": 39908,
+                    "endTime": 39994
+                }
+            ]
+        },
+        {
+            "type": "dodge",
+            "startTime": 40000,
+            "endTime": 60000,
+            "intensity": 2,
+            "slides": [
+                {
+                    "lane": 9,
+                    "startTime": 40074,
+                    "endTime": 40177
+                },
+                {
+                    "lane": 6,
+                    "startTime": 40241,
+                    "endTime": 40629
+                },
+                {
+                    "lane": 9,
+                    "startTime": 40574,
+                    "endTime": 40724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 7,
+                    "startTime": 40741,
+                    "endTime": 40870
+                },
+                {
+                    "lane": 9,
+                    "startTime": 40908,
+                    "endTime": 41058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 9,
+                    "startTime": 40991,
+                    "endTime": 41141
+                },
+                {
+                    "lane": 9,
+                    "startTime": 41074,
+                    "endTime": 41224,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 6,
+                    "startTime": 41241,
+                    "endTime": 41391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 8,
+                    "startTime": 41408,
+                    "endTime": 41558,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 5,
+                    "startTime": 41574,
+                    "endTime": 41724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 3,
+                    "startTime": 41741,
+                    "endTime": 41999
+                },
+                {
+                    "lane": 5,
+                    "startTime": 42074,
+                    "endTime": 42224,
+                    "noteType": "special2"
+                },
+                {
+                    "lane": 3,
+                    "startTime": 42241,
+                    "endTime": 42258
+                },
+                {
+                    "lane": 0,
+                    "startTime": 42408,
+                    "endTime": 42558,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 3,
+                    "startTime": 42574,
+                    "endTime": 42724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 2,
+                    "startTime": 42741,
+                    "endTime": 42827
+                },
+                {
+                    "lane": 0,
+                    "startTime": 42908,
+                    "endTime": 43218
+                },
+                {
+                    "lane": 3,
+                    "startTime": 43241,
+                    "endTime": 43391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 3,
+                    "startTime": 43408,
+                    "endTime": 43511
+                },
+                {
+                    "lane": 0,
+                    "startTime": 43574,
+                    "endTime": 43962
+                },
+                {
+                    "lane": 3,
+                    "startTime": 43908,
+                    "endTime": 44011
+                },
+                {
+                    "lane": 5,
+                    "startTime": 44074,
+                    "endTime": 44177
+                },
+                {
+                    "lane": 6,
+                    "startTime": 44241,
+                    "endTime": 44344
+                },
+                {
+                    "lane": 8,
+                    "startTime": 44408,
+                    "endTime": 44558,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 9,
+                    "startTime": 44574,
+                    "endTime": 44724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 7,
+                    "startTime": 44741,
+                    "endTime": 44844
+                },
+                {
+                    "lane": 9,
+                    "startTime": 44908,
+                    "endTime": 45058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 8,
+                    "startTime": 45074,
+                    "endTime": 45462
+                },
+                {
+                    "lane": 5,
+                    "startTime": 45408,
+                    "endTime": 45537
+                },
+                {
+                    "lane": 9,
+                    "startTime": 45574,
+                    "endTime": 46350
+                },
+                {
+                    "lane": 2,
+                    "startTime": 46241,
+                    "endTime": 46258
+                },
+                {
+                    "lane": 0,
+                    "startTime": 46408,
+                    "endTime": 46796
+                },
+                {
+                    "lane": 4,
+                    "startTime": 46741,
+                    "endTime": 46844
+                },
+                {
+                    "lane": 6,
+                    "startTime": 46908,
+                    "endTime": 47011
+                },
+                {
+                    "lane": 7,
+                    "startTime": 47074,
+                    "endTime": 47462
+                },
+                {
+                    "lane": 8,
+                    "startTime": 47408,
+                    "endTime": 47511
+                },
+                {
+                    "lane": 8,
+                    "startTime": 47574,
+                    "endTime": 47677
+                },
+                {
+                    "lane": 6,
+                    "startTime": 47741,
+                    "endTime": 48051
+                },
+                {
+                    "lane": 3,
+                    "startTime": 48074,
+                    "endTime": 48224,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 48241,
+                    "endTime": 48413
+                },
+                {
+                    "lane": 0,
+                    "startTime": 48574,
+                    "endTime": 48643
+                },
+                {
+                    "lane": 1,
+                    "startTime": 48741,
+                    "endTime": 48827
+                },
+                {
+                    "lane": 4,
+                    "startTime": 48908,
+                    "endTime": 49011
+                },
+                {
+                    "lane": 0,
+                    "startTime": 49074,
+                    "endTime": 49462
+                },
+                {
+                    "lane": 5,
+                    "startTime": 49408,
+                    "endTime": 49511
+                },
+                {
+                    "lane": 6,
+                    "startTime": 49575,
+                    "endTime": 49678
+                },
+                {
+                    "lane": 8,
+                    "startTime": 49741,
+                    "endTime": 50051
+                },
+                {
+                    "lane": 8,
+                    "startTime": 50075,
+                    "endTime": 50178
+                },
+                {
+                    "lane": 9,
+                    "startTime": 50241,
+                    "endTime": 50310
+                },
+                {
+                    "lane": 8,
+                    "startTime": 50408,
+                    "endTime": 50477
+                },
+                {
+                    "lane": 6,
+                    "startTime": 50574,
+                    "endTime": 50660
+                },
+                {
+                    "lane": 3,
+                    "startTime": 50741,
+                    "endTime": 50844
+                },
+                {
+                    "lane": 0,
+                    "startTime": 50908,
+                    "endTime": 51296
+                },
+                {
+                    "lane": 4,
+                    "startTime": 51241,
+                    "endTime": 51391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 3,
+                    "startTime": 51408,
+                    "endTime": 51537
+                },
+                {
+                    "lane": 0,
+                    "startTime": 51575,
+                    "endTime": 51725,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 51658,
+                    "endTime": 51808
+                },
+                {
+                    "lane": 0,
+                    "startTime": 51741,
+                    "endTime": 51891,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 1,
+                    "startTime": 51908,
+                    "endTime": 52058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 1,
+                    "startTime": 52074,
+                    "endTime": 52224,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 4,
+                    "startTime": 52241,
+                    "endTime": 52551
+                },
+                {
+                    "lane": 7,
+                    "startTime": 52574,
+                    "endTime": 52724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 8,
+                    "startTime": 52741,
+                    "endTime": 52891,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 9,
+                    "startTime": 52908,
+                    "endTime": 53058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 9,
+                    "startTime": 53574,
+                    "endTime": 53608
+                },
+                {
+                    "lane": 9,
+                    "startTime": 54408,
+                    "endTime": 54796
+                },
+                {
+                    "lane": 7,
+                    "startTime": 54741,
+                    "endTime": 54891,
+                    "noteType": "special2"
+                },
+                {
+                    "lane": 4,
+                    "startTime": 54908,
+                    "endTime": 55058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 4,
+                    "startTime": 54991,
+                    "endTime": 55141
+                },
+                {
+                    "lane": 3,
+                    "startTime": 55074,
+                    "endTime": 55177
+                },
+                {
+                    "lane": 2,
+                    "startTime": 55241,
+                    "endTime": 55391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 2,
+                    "startTime": 55324,
+                    "endTime": 55530
+                },
+                {
+                    "lane": 0,
+                    "startTime": 55574,
+                    "endTime": 55677
+                },
+                {
+                    "lane": 3,
+                    "startTime": 55741,
+                    "endTime": 55844
+                },
+                {
+                    "lane": 0,
+                    "startTime": 55908,
+                    "endTime": 55925
+                },
+                {
+                    "lane": 0,
+                    "startTime": 56074,
+                    "endTime": 56384
+                },
+                {
+                    "lane": 5,
+                    "startTime": 56408,
+                    "endTime": 56558,
+                    "noteType": "special2"
+                },
+                {
+                    "lane": 5,
+                    "startTime": 56491,
+                    "endTime": 56542
+                },
+                {
+                    "lane": 9,
+                    "startTime": 56741,
+                    "endTime": 56844
+                },
+                {
+                    "lane": 6,
+                    "startTime": 56908,
+                    "endTime": 57011
+                },
+                {
+                    "lane": 9,
+                    "startTime": 57074,
+                    "endTime": 57384
+                },
+                {
+                    "lane": 8,
+                    "startTime": 57408,
+                    "endTime": 57511
+                },
+                {
+                    "lane": 5,
+                    "startTime": 57574,
+                    "endTime": 57724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 5,
+                    "startTime": 57658,
+                    "endTime": 57808
+                },
+                {
+                    "lane": 5,
+                    "startTime": 57741,
+                    "endTime": 57844
+                },
+                {
+                    "lane": 3,
+                    "startTime": 57908,
+                    "endTime": 57925
+                },
+                {
+                    "lane": 0,
+                    "startTime": 58074,
+                    "endTime": 58384
+                },
+                {
+                    "lane": 4,
+                    "startTime": 58408,
+                    "endTime": 58511
+                },
+                {
+                    "lane": 0,
+                    "startTime": 58574,
+                    "endTime": 58724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 58658,
+                    "endTime": 58808,
+                    "noteType": "special2"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 58741,
+                    "endTime": 58844
+                },
+                {
+                    "lane": 1,
+                    "startTime": 58908,
+                    "endTime": 59011
+                },
+                {
+                    "lane": 6,
+                    "startTime": 59074,
+                    "endTime": 59177
+                },
+                {
+                    "lane": 4,
+                    "startTime": 59241,
+                    "endTime": 59344
+                },
+                {
+                    "lane": 2,
+                    "startTime": 59408,
+                    "endTime": 59558,
+                    "noteType": "special2"
+                },
+                {
+                    "lane": 1,
+                    "startTime": 59491,
+                    "endTime": 59641,
+                    "noteType": "special2"
+                },
+                {
+                    "lane": 1,
+                    "startTime": 59574,
+                    "endTime": 59724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 59658,
+                    "endTime": 59808,
+                    "noteType": "special2"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 59741,
+                    "endTime": 60129
+                }
+            ]
+        },
+        {
+            "type": "dodge",
+            "startTime": 60000,
+            "endTime": 75000,
+            "intensity": 0,
+            "slides": [
+                {
+                    "lane": 3,
+                    "startTime": 60074,
+                    "endTime": 60224,
+                    "noteType": "special2"
+                },
+                {
+                    "lane": 7,
+                    "startTime": 60241,
+                    "endTime": 60391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 7,
+                    "startTime": 60324,
+                    "endTime": 60474
+                },
+                {
+                    "lane": 7,
+                    "startTime": 60407,
+                    "endTime": 60510
+                },
+                {
+                    "lane": 4,
+                    "startTime": 60574,
+                    "endTime": 60724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 4,
+                    "startTime": 60657,
+                    "endTime": 60863
+                },
+                {
+                    "lane": 7,
+                    "startTime": 60907,
+                    "endTime": 61010
+                },
+                {
+                    "lane": 9,
+                    "startTime": 61074,
+                    "endTime": 61177
+                },
+                {
+                    "lane": 7,
+                    "startTime": 61241,
+                    "endTime": 61258
+                },
+                {
+                    "lane": 7,
+                    "startTime": 61408,
+                    "endTime": 61718
+                },
+                {
+                    "lane": 1,
+                    "startTime": 61741,
+                    "endTime": 61891,
+                    "noteType": "special2"
+                },
+                {
+                    "lane": 1,
+                    "startTime": 61824,
+                    "endTime": 61875
+                },
+                {
+                    "lane": 3,
+                    "startTime": 62074,
+                    "endTime": 62177
+                },
+                {
+                    "lane": 1,
+                    "startTime": 62241,
+                    "endTime": 62344
+                },
+                {
+                    "lane": 0,
+                    "startTime": 62408,
+                    "endTime": 62718
+                },
+                {
+                    "lane": 3,
+                    "startTime": 62741,
+                    "endTime": 62844
+                },
+                {
+                    "lane": 0,
+                    "startTime": 62907,
+                    "endTime": 63057,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 62991,
+                    "endTime": 63141
+                },
+                {
+                    "lane": 0,
+                    "startTime": 63074,
+                    "endTime": 63177
+                },
+                {
+                    "lane": 3,
+                    "startTime": 63241,
+                    "endTime": 63258
+                },
+                {
+                    "lane": 6,
+                    "startTime": 63408,
+                    "endTime": 63718
+                },
+                {
+                    "lane": 5,
+                    "startTime": 63741,
+                    "endTime": 63844
+                },
+                {
+                    "lane": 9,
+                    "startTime": 63907,
+                    "endTime": 64057,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 9,
+                    "startTime": 63991,
+                    "endTime": 64141,
+                    "noteType": "special2"
+                },
+                {
+                    "lane": 9,
+                    "startTime": 64074,
+                    "endTime": 64177
+                },
+                {
+                    "lane": 8,
+                    "startTime": 64241,
+                    "endTime": 64344
+                },
+                {
+                    "lane": 6,
+                    "startTime": 64408,
+                    "endTime": 64520
+                },
+                {
+                    "lane": 9,
+                    "startTime": 64574,
+                    "endTime": 64686
+                },
+                {
+                    "lane": 5,
+                    "startTime": 64741,
+                    "endTime": 65129
+                },
+                {
+                    "lane": 9,
+                    "startTime": 65074,
+                    "endTime": 65224,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 66408,
+                    "endTime": 66558,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 2,
+                    "startTime": 66574,
+                    "endTime": 66724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 2,
+                    "startTime": 66741,
+                    "endTime": 66891,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 1,
+                    "startTime": 66908,
+                    "endTime": 67058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 4,
+                    "startTime": 67074,
+                    "endTime": 67194
+                },
+                {
+                    "lane": 0,
+                    "startTime": 67408,
+                    "endTime": 67558
+                },
+                {
+                    "lane": 0,
+                    "startTime": 67491,
+                    "endTime": 67641
+                },
+                {
+                    "lane": 0,
+                    "startTime": 67574,
+                    "endTime": 67694
+                },
+                {
+                    "lane": 3,
+                    "startTime": 67908,
+                    "endTime": 68058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 3,
+                    "startTime": 68074,
+                    "endTime": 68224,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 68241,
+                    "endTime": 68391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 68324,
+                    "endTime": 68474
+                },
+                {
+                    "lane": 0,
+                    "startTime": 68408,
+                    "endTime": 68528
+                },
+                {
+                    "lane": 3,
+                    "startTime": 68741,
+                    "endTime": 68861
+                },
+                {
+                    "lane": 9,
+                    "startTime": 69074,
+                    "endTime": 69462
+                },
+                {
+                    "lane": 8,
+                    "startTime": 69408,
+                    "endTime": 69477
+                },
+                {
+                    "lane": 6,
+                    "startTime": 69574,
+                    "endTime": 69724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 6,
+                    "startTime": 69658,
+                    "endTime": 69808
+                },
+                {
+                    "lane": 6,
+                    "startTime": 69741,
+                    "endTime": 69810
+                },
+                {
+                    "lane": 8,
+                    "startTime": 69908,
+                    "endTime": 69977
+                },
+                {
+                    "lane": 5,
+                    "startTime": 70074,
+                    "endTime": 70224,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 9,
+                    "startTime": 70241,
+                    "endTime": 70379
+                },
+                {
+                    "lane": 6,
+                    "startTime": 70574,
+                    "endTime": 70724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 8,
+                    "startTime": 70741,
+                    "endTime": 70891,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 5,
+                    "startTime": 70908,
+                    "endTime": 71058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 71074,
+                    "endTime": 71224,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 6,
+                    "startTime": 71241,
+                    "endTime": 71391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 4,
+                    "startTime": 71408,
+                    "endTime": 71558,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 2,
+                    "startTime": 71574,
+                    "endTime": 71724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 3,
+                    "startTime": 71741,
+                    "endTime": 71891,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 1,
+                    "startTime": 72074,
+                    "endTime": 72143
+                },
+                {
+                    "lane": 3,
+                    "startTime": 72574,
+                    "endTime": 72643
+                },
+                {
+                    "lane": 0,
+                    "startTime": 72908,
+                    "endTime": 73058
+                },
+                {
+                    "lane": 0,
+                    "startTime": 73074,
+                    "endTime": 73143
+                },
+                {
+                    "lane": 2,
+                    "startTime": 73408,
+                    "endTime": 73558,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 2,
+                    "startTime": 73574,
+                    "endTime": 73724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 73741,
+                    "endTime": 73891,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 73908,
+                    "endTime": 74058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 1,
+                    "startTime": 74074,
+                    "endTime": 74143
+                },
+                {
+                    "lane": 6,
+                    "startTime": 74408,
+                    "endTime": 74558,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 8,
+                    "startTime": 74741,
+                    "endTime": 74810
+                }
+            ]
+        },
+        {
+            "type": "dodge",
+            "startTime": 75000,
+            "endTime": 81000,
+            "intensity": 1,
+            "slides": [
+                {
+                    "lane": 6,
+                    "startTime": 75241,
+                    "endTime": 75310
+                },
+                {
+                    "lane": 9,
+                    "startTime": 75575,
+                    "endTime": 75725
+                },
+                {
+                    "lane": 9,
+                    "startTime": 75741,
+                    "endTime": 75810
+                },
+                {
+                    "lane": 6,
+                    "startTime": 76075,
+                    "endTime": 76225,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 6,
+                    "startTime": 76241,
+                    "endTime": 76391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 9,
+                    "startTime": 76408,
+                    "endTime": 76558,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 9,
+                    "startTime": 76575,
+                    "endTime": 76725,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 7,
+                    "startTime": 76741,
+                    "endTime": 76810
+                },
+                {
+                    "lane": 4,
+                    "startTime": 77074,
+                    "endTime": 77177
+                },
+                {
+                    "lane": 1,
+                    "startTime": 77408,
+                    "endTime": 77558,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 2,
+                    "startTime": 77574,
+                    "endTime": 77677
+                },
+                {
+                    "lane": 1,
+                    "startTime": 77908,
+                    "endTime": 78058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 78074,
+                    "endTime": 78177
+                },
+                {
+                    "lane": 2,
+                    "startTime": 78408,
+                    "endTime": 78511
+                },
+                {
+                    "lane": 4,
+                    "startTime": 78741,
+                    "endTime": 78891,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 4,
+                    "startTime": 78908,
+                    "endTime": 79058,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 79074,
+                    "endTime": 79224,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 0,
+                    "startTime": 79241,
+                    "endTime": 79391,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 3,
+                    "startTime": 79408,
+                    "endTime": 79511
+                },
+                {
+                    "lane": 5,
+                    "startTime": 79741,
+                    "endTime": 79879
+                },
+                {
+                    "lane": 8,
+                    "startTime": 80074,
+                    "endTime": 80224,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 9,
+                    "startTime": 80241,
+                    "endTime": 80379
+                },
+                {
+                    "lane": 6,
+                    "startTime": 80574,
+                    "endTime": 80724,
+                    "noteType": "special"
+                },
+                {
+                    "lane": 3,
+                    "startTime": 80741,
+                    "endTime": 80879
+                }
+            ]
+        },
+        {
+            "type": "touhou",
+            "startTime": 81000,
+            "endTime": 116441,
+            "intensity": 2,
+            "slides": [
+                {
+                    "pattern": "random",
+                    "startTime": 81074,
+                    "x": 592,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 82241,
+                    "x": 656,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 82408,
+                    "x": 528,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 83741,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 84241,
+                    "x": 336,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 84741,
+                    "x": 144,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 84908,
+                    "x": 144,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 85074,
+                    "x": 80,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 85574,
+                    "x": 80,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 85741,
+                    "x": 80,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 86074,
+                    "x": 80,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 86241,
+                    "x": 144,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 86408,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 86574,
+                    "x": 80,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 86741,
+                    "x": 144,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 86908,
+                    "x": 336,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 87241,
+                    "x": 272,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 87408,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 87741,
+                    "x": 336,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 87908,
+                    "x": 528,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 88074,
+                    "x": 592,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 88241,
+                    "x": 592,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 88408,
+                    "x": 528,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 88741,
+                    "x": 528,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 88908,
+                    "x": 656,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 89074,
+                    "x": 656,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 89241,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 89408,
+                    "x": 592,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 89574,
+                    "x": 336,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 89908,
+                    "x": 336,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 90074,
+                    "x": 144,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 90241,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 90574,
+                    "x": 80,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 90741,
+                    "x": 272,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 90908,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 91074,
+                    "x": 656,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 91240,
+                    "x": 528,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 91407,
+                    "x": 592,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 91574,
+                    "x": 528,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 91741,
+                    "x": 464,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 92074,
+                    "x": 656,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 92241,
+                    "x": 656,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 92908,
+                    "x": 272,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 93074,
+                    "x": 80,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 93408,
+                    "x": 272,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 93574,
+                    "x": 144,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 93741,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 94074,
+                    "x": 272,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 94241,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 94408,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 94741,
+                    "x": 272,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 94908,
+                    "x": 528,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 95241,
+                    "x": 656,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 95408,
+                    "x": 592,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 95575,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 95741,
+                    "x": 528,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 96074,
+                    "x": 336,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 96241,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 96408,
+                    "x": 272,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 96575,
+                    "x": 80,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 96741,
+                    "x": 80,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 96908,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 97074,
+                    "x": 272,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 97241,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 97408,
+                    "x": 592,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 97574,
+                    "x": 592,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 97908,
+                    "x": 528,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 98074,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 98241,
+                    "x": 592,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 98324,
+                    "x": 592,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 98408,
+                    "x": 592,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 98574,
+                    "x": 464,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 98741,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 98908,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 99074,
+                    "x": 272,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 99241,
+                    "x": 528,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 99574,
+                    "x": 464,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 99741,
+                    "x": 592,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 100074,
+                    "x": 592,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 100241,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 100574,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 100908,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 101074,
+                    "x": 80,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 101574,
+                    "x": 80,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 101741,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 101908,
+                    "x": 80,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 102074,
+                    "x": 336,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 102241,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 102741,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 103741,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 103991,
+                    "x": 592,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 104074,
+                    "x": 592,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 104241,
+                    "x": 464,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 104324,
+                    "x": 464,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 104491,
+                    "x": 464,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 104658,
+                    "x": 272,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 104741,
+                    "x": 272,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 104824,
+                    "x": 272,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 104908,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 104991,
+                    "x": 144,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 105074,
+                    "x": 144,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 105241,
+                    "x": 80,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 105408,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 105491,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 105574,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 105658,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 105741,
+                    "x": 144,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 105824,
+                    "x": 144,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 106074,
+                    "x": 336,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 106158,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 106241,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 106324,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 106408,
+                    "x": 336,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 106741,
+                    "x": 464,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 106908,
+                    "x": 656,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 106991,
+                    "x": 656,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 107074,
+                    "x": 592,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 107241,
+                    "x": 656,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 107408,
+                    "x": 592,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 107491,
+                    "x": 528,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 107658,
+                    "x": 656,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 107741,
+                    "x": 656,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 107908,
+                    "x": 464,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 108074,
+                    "x": 336,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 108241,
+                    "x": 336,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 108324,
+                    "x": 336,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 108491,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 108574,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 108741,
+                    "x": 80,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 108824,
+                    "x": 80,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 108908,
+                    "x": 144,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 108991,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 109074,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 109324,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 109408,
+                    "x": 144,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 109574,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 109657,
+                    "x": 272,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 109824,
+                    "x": 272,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 109991,
+                    "x": 464,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 110074,
+                    "x": 464,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 110157,
+                    "x": 464,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 110241,
+                    "x": 528,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 110324,
+                    "x": 592,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 110407,
+                    "x": 592,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 110574,
+                    "x": 656,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 110741,
+                    "x": 528,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 110824,
+                    "x": 528,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 110907,
+                    "x": 528,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 110991,
+                    "x": 592,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 111074,
+                    "x": 656,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 111157,
+                    "x": 656,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 111407,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 111491,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 111574,
+                    "x": 336,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 111657,
+                    "x": 336,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 111741,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 112074,
+                    "x": 336,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 112241,
+                    "x": 144,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 112324,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 112407,
+                    "x": 272,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 112574,
+                    "x": 80,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 112741,
+                    "x": 144,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 112824,
+                    "x": 144,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 112991,
+                    "x": 80,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "normal",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "spiral",
+                    "startTime": 113074,
+                    "x": 80,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "radial",
+                    "startTime": 113241,
+                    "x": 208,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 113407,
+                    "x": 336,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "normal"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 113574,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 113658,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 113741,
+                    "x": 464,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#2D2D2D",
+                    "glowColor": "rgba(45, 45, 45, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 113824,
+                    "x": 464,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#4A0000",
+                    "glowColor": "rgba(74, 0, 0, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 113908,
+                    "x": 528,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#8A0000",
+                    "glowColor": "rgba(138, 0, 0, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "random",
+                    "startTime": 113991,
+                    "x": 592,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#FF3333",
+                    "glowColor": "rgba(255, 51, 51, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special2"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 114074,
+                    "x": 528,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#00E0E0",
+                    "glowColor": "rgba(0, 224, 224, 0.8)",
+                    "soundId": "clap"
+                },
+                {
+                    "pattern": "wave",
+                    "startTime": 114408,
+                    "x": 464,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#E5E5E5",
+                    "glowColor": "rgba(229, 229, 229, 0.8)",
+                    "soundId": "clap",
+                    "noteType": "special"
+                },
+                {
+                    "pattern": "aimed",
+                    "startTime": 115741,
+                    "x": 400,
+                    "y": 50,
+                    "bulletSpeed": 5,
+                    "bulletCount": 6,
+                    "duration": 150,
+                    "interval": 250,
+                    "color": "#141414",
+                    "glowColor": "rgba(20, 20, 20, 0.8)",
+                    "soundId": "clap"
+                }
+            ]
+        }
+    ]
+}

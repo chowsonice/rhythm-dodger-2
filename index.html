@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Rhythm Dodger</title>
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=Noto+Serif+JP:wght@400;700&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="rotateScreen" class="rotate-screen">
+        <div class="rotate-content">
+            <div class="rotate-icon">📱</div>
+            <h2>Please Rotate Your Device</h2>
+            <p>This game is best played in landscape mode</p>
+            <div class="rotate-arrow">↻</div>
+        </div>
+    </div>
+
+    <div id="game-container">
+        <div class="scanlines"></div>
+        <video id="bgVideo" src="bg.mp4" muted playsinline loop preload="auto"></video>
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="ui-overlay" class="hidden">
+            <div id="score">Score: 0</div>
+            <div id="godModeIndicator" class="god-mode-indicator hidden">GOD MODE</div>
+            <button id="fullscreenBtn" class="fullscreen-btn" title="Fullscreen">⛶</button>
+            <button id="pauseBtn" class="hidden">⏸</button>
+        </div>
+
+        <div id="touchControls" class="touch-controls-wrapper hidden">
+            <div class="touch-pad left">
+                <button id="upBtnLeft" class="touch-btn up">▲</button>
+                <button id="leftBtnLeft" class="touch-btn left">◀</button>
+                <button id="rightBtnLeft" class="touch-btn right">▶</button>
+                <button id="downBtnLeft" class="touch-btn down">▼</button>
+            </div>
+            <div class="touch-pad right">
+                <button id="upBtn" class="touch-btn up">▲</button>
+                <button id="leftBtn" class="touch-btn left">◀</button>
+                <button id="rightBtn" class="touch-btn right">▶</button>
+                <button id="downBtn" class="touch-btn down">▼</button>
+            </div>
+        </div>
+
+        <div id="countdown" class="countdown hidden">3</div>
+
+        <div id="dodgeSlider" class="dodge-slider hidden">
+            <input type="range" id="playerSlider" min="0" max="100" value="50">
+        </div>
+
+        <!-- Eyes Background Layer -->
+        <div id="eyes-container" class="eyes-container"></div>
+        <div id="menu-overlays" class="menu-overlays">
+            <div class="menu-vignette"></div>
+            <div class="menu-grain"></div>
+        </div>
+
+        <div id="menu" class="screen">
+            <h1>化けの花</h1>
+            <div class="subtitle">B A K E &nbsp; N O &nbsp; H A N A</div>
+            <div class="menu-instructions">
+                <div class="instruction-mode">
+                    <span class="mode-label">DODGE</span>
+                    <span class="mode-desc">←→ to dodge notes</span>
+                </div>
+                <div class="instruction-mode">
+                    <span class="mode-label">TOUHOU</span>
+                    <span class="mode-desc">WASD to dodge bullets</span>
+                </div>
+            </div>
+            <div class="menu-buttons">
+                <button id="startBtn" class="menu-btn primary">BLOOM</button>
+                <!-- <button id="skipToTouhouBtn" class="menu-btn secondary">SKIP TO 1:21</button> -->
+                <button id="settingsBtn" class="menu-btn secondary">SETTINGS</button>
+                <button id="menuFullscreenBtn" class="menu-btn secondary">FULLSCREEN</button>
+            </div>
+            <div class="menu-footer">DON'T LOOK AT ME</div>
+        </div>
+
+        <div id="settings" class="screen hidden">
+            <h1 class="settings-title glitch-wrapper" data-text="Settings">SETTINGS</h1>
+            <div class="settings-content">
+                <div class="setting-item">
+                    <label class="setting-label">Music Volume</label>
+                    <div class="setting-control">
+                        <input type="range" id="musicVolume" class="setting-slider" min="0" max="100" value="80">
+                        <span id="musicVolumeValue" class="slider-value">80%</span>
+                    </div>
+                </div>
+                <div class="setting-item">
+                    <label class="setting-label">SFX Volume</label>
+                    <div class="setting-control">
+                        <input type="range" id="sfxVolume" class="setting-slider" min="0" max="100" value="70">
+                        <span id="sfxVolumeValue" class="slider-value">70%</span>
+                    </div>
+                </div>
+                <div class="setting-item">
+                    <label class="setting-label">Background Video</label>
+                    <div class="setting-control">
+                        <button id="bgVideoToggle" class="toggle-btn active">ON</button>
+                    </div>
+                </div>
+                <div class="setting-item">
+                    <label class="setting-label">Visual Effects</label>
+                    <div class="setting-control">
+                        <button id="vfxToggle" class="toggle-btn active">ON</button>
+                    </div>
+                </div>
+                <div class="setting-item">
+                    <label class="setting-label">Dodge Slider Control</label>
+                    <div class="setting-control">
+                        <button id="dodgeSliderToggle" class="toggle-btn">OFF</button>
+                    </div>
+                </div>
+                <div class="setting-item">
+                    <label class="setting-label">Screen Buttons</label>
+                    <div class="setting-control">
+                        <button id="touchControlsToggle" class="toggle-btn active">ON</button>
+                    </div>
+                </div>
+                <div class="setting-item">
+                    <label class="setting-label">God Mode</label>
+                    <div class="setting-control">
+                        <button id="godModeToggle" class="toggle-btn">OFF</button>
+                    </div>
+                </div>
+            </div>
+            <div class="settings-buttons">
+                <button id="settingsBackBtn" class="menu-btn secondary">Back to Menu</button>
+            </div>
+        </div>
+
+        <div id="pauseMenu" class="screen hidden">
+            <h1 class="pause-title glitch-wrapper" data-text="Paused">PAUSED</h1>
+            <div class="pause-buttons">
+                <button id="resumeBtn" class="pause-btn resume">Resume</button>
+                <button id="pauseMenuBtn" class="pause-btn menu">Return to Menu</button>
+            </div>
+        </div>
+
+        <div id="gameOver" class="screen hidden">
+            <h1 class="game-over-title glitch-wrapper" data-text="Game Over">Game Over</h1>
+            <div class="game-over-stats">
+                <div class="stat-row score-row">
+                    <span class="stat-label">Score</span>
+                    <span id="finalScore" class="stat-value score">0</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Max Combo</span>
+                    <span id="finalCombo" class="stat-value combo">0</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label graze">GRAZE</span>
+                    <span id="finalGraze" class="stat-value">0</span>
+                </div>
+            </div>
+            <div class="game-over-buttons">
+                <button id="restartBtn" class="game-over-btn restart">Restart</button>
+                <button id="menuBtn" class="game-over-btn menu">Return to Menu</button>
+            </div>
+        </div>
+
+        <div id="gameComplete" class="screen hidden">
+            <h1 class="game-complete-title glitch-wrapper" data-text="Stage Clear">Stage Clear</h1>
+            <div class="game-complete-grade" id="completionGrade">S</div>
+            <div class="game-over-stats">
+                <div class="stat-row score-row">
+                    <span class="stat-label">Score</span>
+                    <span id="completeScore" class="stat-value score">0</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Max Combo</span>
+                    <span id="completeCombo" class="stat-value combo">0</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label graze">GRAZE</span>
+                    <span id="completeGraze" class="stat-value">0</span>
+                </div>
+            </div>
+            <div class="game-over-buttons">
+                <button id="completeRestartBtn" class="game-over-btn restart">Play Again</button>
+                <button id="completeMenuBtn" class="game-over-btn menu">Return to Menu</button>
+            </div>
+        </div>
+
+        <div id="credits" class="screen hidden">
+            <h1 class="credits-title glitch-wrapper" data-text="Credits">Credits</h1>
+            <div class="credits-content">
+                <div class="credit-item">
+                    <span class="credit-label">Muse Dash Chart</span>
+                    <span class="credit-value">flash</span>
+                    <a href="https://mdmc.moe/chart/67a7a9c318cd881697335d16" target="_blank"
+                        class="credit-link">Download</a>
+                </div>
+                <div class="credit-item">
+                    <span class="credit-label">osu! Chart (converted to dodge)</span>
+                    <span class="credit-value">Yoisaki Kanade</span>
+                    <a href="https://beatconnect.io/?q=BAKENOHANA" target="_blank" class="credit-link">Download</a>
+                </div>
+                <div class="credit-divider"></div>
+                <div class="credit-item made-with">
+                    <span class="credit-label">Made with</span>
+                    <span class="credit-value">Claude Opus 4.5, Gemini 3 & Rice 🍚</span>
+                </div>
+            </div>
+            <div class="credits-buttons">
+                <button id="creditsBackBtn" class="menu-btn secondary">Back to Menu</button>
+            </div>
+        </div>
+
+        <script type="module">
+            // Cache busting - dynamically load main.js with timestamp
+            const modulePath = './src/main.js?';
+            import(modulePath).then(module => {
+                // Module loaded successfully
+                // init() is called automatically on load in main.js, so we don't need to call it here
+                // unless we change main.js to not auto-init.
+                // Currently main.js has: window.addEventListener('load', () => { init(); });
+            }).catch(err => {
+                console.error("Failed to load game module:", err);
+            });
+        </script>
+</body>
+
+</html>
