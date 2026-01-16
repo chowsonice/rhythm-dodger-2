@@ -9,6 +9,7 @@ import { loadChart, updateChartSpawning, updateTouhouSpawning, updateCurrentPhas
 import { loadPlaybackFile, processPlaybackActions } from './Playback.js';
 import { syncSliderWithPlayer, isTouhouMode, handleTap, updateScore } from './Input.js';
 import { generateEyes, openEyes, hideEyes, showEyes } from './Eyes.js';
+import { initTutorial, startTutorial, stopTutorial } from './Tutorial.js';
 
 // Check collision between player and obstacle
 function checkCollision(player, obstacle) {
@@ -984,6 +985,22 @@ export function init() {
         document.getElementById('settings').classList.remove('hidden');
     });
 
+    // Tutorial button
+    document.getElementById('tutorialBtn').addEventListener('click', () => {
+        document.getElementById('menu').classList.add('hidden');
+        document.getElementById('tutorial').classList.remove('hidden');
+        hideEyes();
+        startTutorial();
+    });
+
+    // Tutorial back button
+    document.getElementById('tutorialBackBtn').addEventListener('click', () => {
+        stopTutorial();
+        document.getElementById('tutorial').classList.add('hidden');
+        document.getElementById('menu').classList.remove('hidden');
+        showEyes();
+    });
+
     // Settings back button
     document.getElementById('settingsBackBtn').addEventListener('click', () => {
         document.getElementById('settings').classList.add('hidden');
@@ -1505,6 +1522,9 @@ export function init() {
     game.canvas.addEventListener('mousemove', handleMouseDragMove);
     game.canvas.addEventListener('mouseup', handleMouseDragEnd);
     game.canvas.addEventListener('mouseleave', handleMouseDragEnd);
+
+    // Initialize tutorial
+    initTutorial();
 
     // Pre-load chart
     loadChart(CONFIG.CHART_FILE).then(chart => {

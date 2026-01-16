@@ -1523,6 +1523,396 @@ button:active {
     box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
 }
 
+/* ============================================
+   TUTORIAL SCREEN - INTERACTIVE
+   ============================================ */
+
+.tutorial-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+}
+
+.tutorial-container {
+    display: flex;
+    gap: 15px;
+    max-width: 700px;
+    width: 100%;
+    height: 350px;
+}
+
+.tutorial-sidebar {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tutorial-nav {
+    display: flex;
+    gap: 5px;
+}
+
+.tutorial-tab {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: transparent;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: unset;
+}
+
+.tutorial-tab.active {
+    background: rgba(138, 0, 0, 0.4);
+    border-color: #ff0000;
+    color: #ff0000;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.tutorial-tab:hover:not(.active) {
+    border-color: rgba(255, 0, 0, 0.5);
+    color: #888;
+}
+
+.tutorial-info {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 12px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.tutorial-info.hidden {
+    display: none;
+}
+
+.tutorial-mode-name {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff0000;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+}
+
+.tutorial-description {
+    font-size: 11px;
+    color: rgba(200, 210, 230, 0.8);
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+/* Control Sections - Separated by mode */
+.control-section {
+    margin-bottom: 10px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+    border-left: 2px solid rgba(255, 0, 0, 0.3);
+}
+
+.control-section:last-child {
+    margin-bottom: 0;
+}
+
+.control-section-title {
+    font-size: 9px;
+    font-weight: bold;
+    color: rgba(255, 0, 0, 0.8);
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.control-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+.control-row.focus {
+    margin-top: 6px;
+}
+
+.key {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 6px;
+    font-family: 'Oxygen', monospace;
+    font-size: 10px;
+    font-weight: bold;
+    color: #fff;
+    background: rgba(60, 60, 60, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.key.wide {
+    min-width: 50px;
+}
+
+.or {
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0 4px;
+}
+
+.label {
+    font-size: 10px;
+    color: rgba(200, 210, 230, 0.7);
+    margin-left: 6px;
+}
+
+.control-hint {
+    font-size: 10px;
+    color: rgba(200, 210, 230, 0.6);
+    font-style: italic;
+}
+
+/* Practice Area */
+.tutorial-practice {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.practice-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+.practice-label {
+    font-size: 10px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 2px;
+}
+
+.practice-hint {
+    font-size: 10px;
+    color: rgba(255, 200, 100, 0.8);
+    animation: hintPulse 2s ease-in-out infinite;
+}
+
+@keyframes hintPulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+#tutorialCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Tutorial Touch Controls */
+.tutorial-touch-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.tutorial-touch-pad {
+    width: 80px;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2px;
+}
+
+.tutorial-touch-btn {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 11px;
+    pointer-events: all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.1s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    min-width: unset;
+    padding: 0;
+}
+
+.tutorial-touch-btn.up { grid-column: 2; grid-row: 1; }
+.tutorial-touch-btn.left { grid-column: 1; grid-row: 2; }
+.tutorial-touch-btn.right { grid-column: 3; grid-row: 2; }
+.tutorial-touch-btn.down { grid-column: 2; grid-row: 3; }
+
+.tutorial-touch-btn:active,
+.tutorial-touch-btn.active {
+    background: rgba(255, 0, 0, 0.4);
+    border-color: #ff0000;
+    color: #fff;
+    transform: scale(0.92);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Hide up/down in dodge mode */
+.tutorial-touch-controls.dodge-mode .tutorial-touch-btn.up,
+.tutorial-touch-controls.dodge-mode .tutorial-touch-btn.down {
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+/* Tutorial Slider */
+.tutorial-slider {
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    transform: translateY(50%);
+}
+
+.tutorial-slider.hidden {
+    display: none;
+}
+
+.tutorial-slider input[type="range"] {
+    width: 100%;
+    height: 3px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(90deg,
+        rgba(255, 0, 0, 0.15) 0%,
+        rgba(255, 0, 0, 0.35) 50%,
+        rgba(255, 0, 0, 0.15) 100%);
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.tutorial-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #fff 0%, rgba(255, 0, 0, 0.9) 100%);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.tutorial-slider input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #fff 0%, rgba(255, 0, 0, 0.9) 100%);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.tutorial-buttons {
+    margin-top: 10px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 900px) and (orientation: landscape) {
+    .tutorial-container {
+        height: 260px;
+        gap: 10px;
+    }
+
+    .tutorial-title {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .tutorial-sidebar {
+        width: 170px;
+    }
+
+    .tutorial-tab {
+        padding: 5px 8px;
+        font-size: 10px;
+    }
+
+    .tutorial-info {
+        padding: 8px;
+    }
+
+    .tutorial-mode-name {
+        font-size: 12px;
+    }
+
+    .control-section {
+        padding: 5px;
+        margin-bottom: 6px;
+    }
+
+    .control-section-title {
+        font-size: 8px;
+    }
+
+    .key {
+        min-width: 18px;
+        height: 18px;
+        font-size: 9px;
+    }
+
+    .tutorial-touch-pad {
+        width: 65px;
+        height: 65px;
+    }
+
+    .tutorial-touch-btn {
+        font-size: 9px;
+    }
+}
+
+@media (max-height: 400px) and (orientation: landscape) {
+    .tutorial-container {
+        height: 200px;
+    }
+
+    .control-section:last-child {
+        display: none;
+    }
+}
+
 @media (min-width: 769px) {
     /* Optional: can hide on desktop if user wants, but request implies adding it */
     /* .touch-controls { display: none; } */

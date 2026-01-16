@@ -76,10 +76,96 @@
                 <button id="startBtn" class="menu-btn primary">BLOOM</button>
                 <button id="skipBtn" class="menu-btn secondary" style="display: none;">SKIP TO 1:06</button>
                 <button id="skip125Btn" class="menu-btn secondary">SKIP TO 1:25</button>
+                <button id="tutorialBtn" class="menu-btn secondary">TUTORIAL</button>
                 <button id="settingsBtn" class="menu-btn secondary">SETTINGS</button>
                 <button id="menuFullscreenBtn" class="menu-btn secondary">FULLSCREEN</button>
             </div>
             <div class="menu-footer">DON'T LOOK AT ME</div>
+        </div>
+
+        <div id="tutorial" class="screen hidden">
+            <h1 class="tutorial-title glitch-wrapper" data-text="Tutorial">TUTORIAL</h1>
+            <div class="tutorial-container">
+                <div class="tutorial-sidebar">
+                    <div class="tutorial-nav">
+                        <button id="tutorialDodgeTab" class="tutorial-tab active">DODGE</button>
+                        <button id="tutorialTouhouTab" class="tutorial-tab">TOUHOU</button>
+                    </div>
+                    <div class="tutorial-info" id="tutorialDodgeInfo">
+                        <div class="tutorial-mode-name">DODGE MODE</div>
+                        <div class="tutorial-description">
+                            Move left/right to avoid falling notes.
+                        </div>
+                        <div class="control-section">
+                            <div class="control-section-title">KEYBOARD</div>
+                            <div class="control-row">
+                                <span class="key">A</span><span class="key">D</span>
+                                <span class="or">or</span>
+                                <span class="key">&#8592;</span><span class="key">&#8594;</span>
+                            </div>
+                        </div>
+                        <div class="control-section">
+                            <div class="control-section-title">TOUCH BUTTONS</div>
+                            <div class="control-hint">Use the D-Pad on screen</div>
+                        </div>
+                        <div class="control-section">
+                            <div class="control-section-title">SLIDER MODE</div>
+                            <div class="control-hint">Drag the player</div>
+                        </div>
+                    </div>
+                    <div class="tutorial-info hidden" id="tutorialTouhouInfo">
+                        <div class="tutorial-mode-name">TOUHOU MODE</div>
+                        <div class="tutorial-description">
+                            Dodge bullets in all directions. Graze for points!
+                        </div>
+                        <div class="control-section">
+                            <div class="control-section-title">KEYBOARD</div>
+                            <div class="control-row">
+                                <span class="key">W</span><span class="key">A</span><span class="key">S</span><span class="key">D</span>
+                            </div>
+                            <div class="control-row focus">
+                                <span class="key wide">SHIFT</span>
+                                <span class="label">= Focus (slow + show hitbox)</span>
+                            </div>
+                        </div>
+                        <div class="control-section">
+                            <div class="control-section-title">TOUCH BUTTONS</div>
+                            <div class="control-hint">Use both D-Pads for 8-dir movement</div>
+                        </div>
+                        <div class="control-section">
+                            <div class="control-section-title">DRAG MODE</div>
+                            <div class="control-hint">Drag the player directly on canvas</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tutorial-practice">
+                    <div class="practice-header">
+                        <span class="practice-label">PRACTICE</span>
+                        <span class="practice-hint" id="tutorialHint">Try moving with A/D keys!</span>
+                    </div>
+                    <canvas id="tutorialCanvas"></canvas>
+                    <div id="tutorialTouchControls" class="tutorial-touch-controls dodge-mode">
+                        <div class="tutorial-touch-pad left">
+                            <button id="tutorialUpBtnLeft" class="tutorial-touch-btn up">&#9650;</button>
+                            <button id="tutorialLeftBtnLeft" class="tutorial-touch-btn left">&#9664;</button>
+                            <button id="tutorialRightBtnLeft" class="tutorial-touch-btn right">&#9654;</button>
+                            <button id="tutorialDownBtnLeft" class="tutorial-touch-btn down">&#9660;</button>
+                        </div>
+                        <div class="tutorial-touch-pad right">
+                            <button id="tutorialUpBtn" class="tutorial-touch-btn up">&#9650;</button>
+                            <button id="tutorialLeftBtn" class="tutorial-touch-btn left">&#9664;</button>
+                            <button id="tutorialRightBtn" class="tutorial-touch-btn right">&#9654;</button>
+                            <button id="tutorialDownBtn" class="tutorial-touch-btn down">&#9660;</button>
+                        </div>
+                    </div>
+                    <div id="tutorialSlider" class="tutorial-slider">
+                        <input type="range" id="tutorialPlayerSlider" min="0" max="100" value="50">
+                    </div>
+                </div>
+            </div>
+            <div class="tutorial-buttons">
+                <button id="tutorialBackBtn" class="menu-btn secondary">Back to Menu</button>
+            </div>
         </div>
 
         <div id="settings" class="screen hidden">
