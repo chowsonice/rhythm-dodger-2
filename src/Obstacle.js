@@ -1,5 +1,5 @@
 import { game } from './GameState.js';
-import { settings } from './Settings.js';
+// import { settings } from './Settings.js';
 import { CONFIG } from './Config.js';
 import { playNoteSound } from './Audio.js';
 
@@ -457,6 +457,17 @@ export class Obstacle {
         }
 
         ctx.restore()
+
+        // // Draw hitbox bounding box for debugging
+        // if (settings.showHitboxes) {
+        //     const bounds = this.getBounds();
+        //     ctx.save();
+        //     ctx.strokeStyle = '#00ff00';
+        //     ctx.lineWidth = 2;
+        //     ctx.setLineDash([5, 5]);
+        //     ctx.strokeRect(bounds.x, bounds.y, bounds.width, bounds.height);
+        //     ctx.restore();
+        // }
     };
 
     isOffScreen() {
@@ -464,20 +475,60 @@ export class Obstacle {
     }
 
     getBounds() {
-        // Use a fixed visual hitbox height instead of duration-based height
-        // This ensures collision occurs when the visual (text/eye) reaches the player,
-        // not when the invisible duration-based block bottom reaches it
-        const visualHitboxHeight = 80;
-        const effectiveHeight = Math.min(this.height, visualHitboxHeight);
-        // Position hitbox at the bottom of the note (where the visual collision should occur)
-        const hitboxY = this.y + this.height - effectiveHeight;
+        // Match the visual position exactly (WYSIWYG)
+        const x = this.x + this.jitterX;
+        const y = this.y + this.jitterY;
+        const centerX = x + this.width / 2;
 
-        return {
-            x: this.x,
-            y: Math.max(this.y, hitboxY),
-            width: this.width,
-            height: effectiveHeight
-        };
+        const isEye = this.text === "👁";
+
+        if (isEye) {
+            // Eye is drawn at centerX, y + 60 with width ~140, height ~100
+            const eyeWidth = 140;
+            const eyeHeight = 100;
+            const eyeY = y + 60;
+
+            return {
+                x: centerX - eyeWidth / 2,
+                y: eyeY - eyeHeight / 2,
+                width: eyeWidth,
+                height: eyeHeight
+            };
+        } else {
+            // Text rendering details:
+            // - fontSize = 48, textBaseline = 'middle' (so char is centered at charY)
+            // - startTextY in draw = y + 20, each char at startTextY + i * fontSize
+            // - RGB split adds offsets: red (-4, -2), cyan (+4, +2)
+            // - stretchFactor scales horizontally (1 to 3 range)
+            // - charJitters add per-character horizontal offset (±1.5 pixels)
+            const fontSize = 48;
+            const charCount = this.chars.length;
+            const startTextY = y + 20;
+
+            // Vertical bounds: first char center is at startTextY, last at startTextY + (charCount-1)*fontSize
+            // With textBaseline 'middle', each char extends ±fontSize/2 from center
+            // Plus RGB offset of ±2 pixels vertically
+            const rgbOffsetY = 2;
+            const firstCharCenterY = startTextY;
+            const lastCharCenterY = startTextY + (charCount - 1) * fontSize;
+            const topY = firstCharCenterY - fontSize / 2 - rgbOffsetY;
+            const bottomY = lastCharCenterY + fontSize / 2 + rgbOffsetY;
+            const textHeight = bottomY - topY;
+
+            // Horizontal bounds: character width ≈ fontSize, scaled by stretchFactor
+            // Plus RGB offset of ±4 pixels, plus max charJitter of ±1.5
+            const rgbOffsetX = 4;
+            const maxCharJitter = 1.5;
+            const baseCharWidth = fontSize * this.stretchFactor;
+            const textWidth = baseCharWidth + (rgbOffsetX + maxCharJitter) * 2;
+
+            return {
+                x: centerX - textWidth / 2,
+                y: topY,
+                width: textWidth,
+                height: textHeight
+            };
+        }
     }
 }
 

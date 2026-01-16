@@ -12,6 +12,7 @@ export const settings = {
     dodgeSliderEnabled: false,
     touchControlsEnabled: isMobileDevice(),
     godMode: false,  // God mode - player cannot die from collisions
+    showHitboxes: true,  // Debug: show hitbox bounding boxes for dodge notes
 };
 
 // Load settings from localStorage
