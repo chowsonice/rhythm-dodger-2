@@ -383,7 +383,7 @@ export async function startGame() {
 
     // Show/hide dodge slider based on initial phase and settings
     const dodgeSlider = document.getElementById('dodgeSlider');
-    const shouldShowSlider = settings.dodgeSliderEnabled && game.phaseMode === 'dodge';
+    const shouldShowSlider = settings.touchModeEnabled && game.phaseMode === 'dodge';
     if (shouldShowSlider) {
         dodgeSlider.classList.remove('hidden');
         // Reset slider to center position
@@ -962,6 +962,8 @@ export function init() {
     document.getElementById('startBtn').addEventListener('click', () => startGame());
     // 66 seconds = 1:06
     document.getElementById('skipBtn').addEventListener('click', () => startGameAt(66000));
+    // 85 seconds = 1:25
+    document.getElementById('skip125Btn').addEventListener('click', () => startGameAt(85000));
     const creditsBtn = document.getElementById('creditsBtn');
     if (creditsBtn) {
         creditsBtn.addEventListener('click', () => {
@@ -1040,7 +1042,7 @@ export function init() {
     const sfxVolumeSlider = document.getElementById('sfxVolume');
     const bgVideoToggle = document.getElementById('bgVideoToggle');
     const vfxToggle = document.getElementById('vfxToggle');
-    const dodgeSliderToggle = document.getElementById('dodgeSliderToggle');
+    const touchModeToggle = document.getElementById('touchModeToggle');
     const touchControlsToggle = document.getElementById('touchControlsToggle');
     const godModeToggle = document.getElementById('godModeToggle');
 
@@ -1060,8 +1062,8 @@ export function init() {
     vfxToggle.textContent = settings.vfxEnabled ? 'ON' : 'OFF';
     vfxToggle.classList.toggle('active', settings.vfxEnabled);
 
-    dodgeSliderToggle.textContent = settings.dodgeSliderEnabled ? 'ON' : 'OFF';
-    dodgeSliderToggle.classList.toggle('active', settings.dodgeSliderEnabled);
+    touchModeToggle.textContent = settings.touchModeEnabled ? 'ON' : 'OFF';
+    touchModeToggle.classList.toggle('active', settings.touchModeEnabled);
 
     touchControlsToggle.textContent = settings.touchControlsEnabled ? 'ON' : 'OFF';
     touchControlsToggle.classList.toggle('active', settings.touchControlsEnabled);
@@ -1103,11 +1105,11 @@ export function init() {
         saveSettings();
     });
 
-    // Dodge slider control toggle
-    dodgeSliderToggle.addEventListener('click', () => {
-        settings.dodgeSliderEnabled = !settings.dodgeSliderEnabled;
-        dodgeSliderToggle.textContent = settings.dodgeSliderEnabled ? 'ON' : 'OFF';
-        dodgeSliderToggle.classList.toggle('active', settings.dodgeSliderEnabled);
+    // Touch mode toggle (formerly Dodge slider control toggle)
+    touchModeToggle.addEventListener('click', () => {
+        settings.touchModeEnabled = !settings.touchModeEnabled;
+        touchModeToggle.textContent = settings.touchModeEnabled ? 'ON' : 'OFF';
+        touchModeToggle.classList.toggle('active', settings.touchModeEnabled);
         saveSettings();
     });
 
@@ -1143,7 +1145,7 @@ export function init() {
     const playerSlider = document.getElementById('playerSlider');
     playerSlider.addEventListener('input', (e) => {
         if (!game.isRunning || game.isPaused) return;
-        if (!settings.dodgeSliderEnabled) return;
+        if (!settings.touchModeEnabled) return;
 
         // Only affect dodge mode
         if (game.phaseMode !== 'dodge') return;
@@ -1401,6 +1403,108 @@ export function init() {
     // Touch/tap controls for mobile
     game.canvas.addEventListener('touchstart', handleTap, { passive: false });
     game.canvas.addEventListener('click', handleTap);
+
+    // Touch drag controls for touhou mode
+    let isDraggingPlayer = false;
+    let dragOffsetX = 0;
+    let dragOffsetY = 0;
+
+    const getCanvasCoordinates = (clientX, clientY) => {
+        const canvasRect = game.canvas.getBoundingClientRect();
+        const scaleX = CONFIG.WIDTH / canvasRect.width;
+        const scaleY = CONFIG.HEIGHT / canvasRect.height;
+        return {
+            x: (clientX - canvasRect.left) * scaleX,
+            y: (clientY - canvasRect.top) * scaleY
+        };
+    };
+
+    const startDrag = (x, y) => {
+        if (!game.isRunning || game.isPaused) return false;
+        if (!settings.touchModeEnabled) return false;
+        if (!isTouhouMode()) return false;
+
+        const player = game.player;
+        const distanceToPlayer = Math.sqrt(
+            Math.pow(x - player.x, 2) + Math.pow(y - player.y, 2)
+        );
+
+        // Use a larger touch radius for easier grabbing (50 pixels)
+        if (distanceToPlayer < 50) {
+            isDraggingPlayer = true;
+            dragOffsetX = player.x - x;
+            dragOffsetY = player.y - y;
+            return true;
+        }
+        return false;
+    };
+
+    const moveDrag = (x, y) => {
+        if (!isDraggingPlayer) return;
+        if (!game.isRunning || game.isPaused) return;
+        if (!isTouhouMode()) return;
+
+        const player = game.player;
+        const newX = x + dragOffsetX;
+        const newY = y + dragOffsetY;
+
+        // Keep within bounds
+        const margin = player.visualRadius;
+        player.x = Math.max(margin, Math.min(CONFIG.WIDTH - margin, newX));
+        player.y = Math.max(margin, Math.min(CONFIG.HEIGHT - margin, newY));
+    };
+
+    const endDrag = () => {
+        isDraggingPlayer = false;
+    };
+
+    // Touch events
+    const handleTouchDragStart = (e) => {
+        const coords = getCanvasCoordinates(e.touches[0].clientX, e.touches[0].clientY);
+        if (startDrag(coords.x, coords.y)) {
+            e.preventDefault();
+        }
+    };
+
+    const handleTouchDragMove = (e) => {
+        if (!isDraggingPlayer) return;
+        e.preventDefault();
+        const coords = getCanvasCoordinates(e.touches[0].clientX, e.touches[0].clientY);
+        moveDrag(coords.x, coords.y);
+    };
+
+    const handleTouchDragEnd = (e) => {
+        endDrag();
+    };
+
+    game.canvas.addEventListener('touchstart', handleTouchDragStart, { passive: false });
+    game.canvas.addEventListener('touchmove', handleTouchDragMove, { passive: false });
+    game.canvas.addEventListener('touchend', handleTouchDragEnd);
+    game.canvas.addEventListener('touchcancel', handleTouchDragEnd);
+
+    // Mouse events for desktop
+    const handleMouseDragStart = (e) => {
+        const coords = getCanvasCoordinates(e.clientX, e.clientY);
+        if (startDrag(coords.x, coords.y)) {
+            e.preventDefault();
+        }
+    };
+
+    const handleMouseDragMove = (e) => {
+        if (!isDraggingPlayer) return;
+        e.preventDefault();
+        const coords = getCanvasCoordinates(e.clientX, e.clientY);
+        moveDrag(coords.x, coords.y);
+    };
+
+    const handleMouseDragEnd = (e) => {
+        endDrag();
+    };
+
+    game.canvas.addEventListener('mousedown', handleMouseDragStart);
+    game.canvas.addEventListener('mousemove', handleMouseDragMove);
+    game.canvas.addEventListener('mouseup', handleMouseDragEnd);
+    game.canvas.addEventListener('mouseleave', handleMouseDragEnd);
 
     // Pre-load chart
     loadChart(CONFIG.CHART_FILE).then(chart => {

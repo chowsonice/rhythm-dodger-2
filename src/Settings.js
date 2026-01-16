@@ -9,7 +9,7 @@ export const settings = {
     sfxVolume: 0.7,
     bgVideoEnabled: true,
     vfxEnabled: true,
-    dodgeSliderEnabled: false,
+    touchModeEnabled: false,
     touchControlsEnabled: isMobileDevice(),
     godMode: false,  // God mode - player cannot die from collisions
     showHitboxes: true,  // Debug: show hitbox bounding boxes for dodge notes

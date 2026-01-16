@@ -75,6 +75,7 @@
             <div class="menu-buttons">
                 <button id="startBtn" class="menu-btn primary">BLOOM</button>
                 <button id="skipBtn" class="menu-btn secondary" style="display: none;">SKIP TO 1:06</button>
+                <button id="skip125Btn" class="menu-btn secondary">SKIP TO 1:25</button>
                 <button id="settingsBtn" class="menu-btn secondary">SETTINGS</button>
                 <button id="menuFullscreenBtn" class="menu-btn secondary">FULLSCREEN</button>
             </div>
@@ -111,9 +112,9 @@
                     </div>
                 </div>
                 <div class="setting-item">
-                    <label class="setting-label">Dodge Slider Control</label>
+                    <label class="setting-label">Touch Mode</label>
                     <div class="setting-control">
-                        <button id="dodgeSliderToggle" class="toggle-btn">OFF</button>
+                        <button id="touchModeToggle" class="toggle-btn">OFF</button>
                     </div>
                 </div>
                 <div class="setting-item">
@@ -214,7 +215,7 @@
 
         <script type="module">
             // Cache busting - dynamically load main.js with timestamp
-            const modulePath = './src/main.js?';
+            const modulePath = './src/main.js?' + Date.now();
             import(modulePath).then(module => {
                 // Module loaded successfully
                 // init() is called automatically on load in main.js, so we don't need to call it here

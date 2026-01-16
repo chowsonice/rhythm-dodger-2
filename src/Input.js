@@ -4,7 +4,7 @@ import { settings } from './Settings.js';
 
 // Sync the dodge slider position with the player's X position
 export function syncSliderWithPlayer() {
-    if (!settings.dodgeSliderEnabled) return;
+    if (!settings.touchModeEnabled) return;
     if (game.phaseMode !== 'dodge') return;
     if (!game.player) return;
 
