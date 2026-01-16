@@ -51,23 +51,14 @@ function applySettings() {
 
 // Helper to update control visibility based on phase
 function updateControlsVisibility() {
-    const upBtn = document.getElementById('upBtn');
-    const downBtn = document.getElementById('downBtn');
-    const upBtnLeft = document.getElementById('upBtnLeft');
-    const downBtnLeft = document.getElementById('downBtnLeft');
+    const touchControls = document.getElementById('touchControls');
 
-    if (!upBtn || !downBtn || !upBtnLeft || !downBtnLeft) return;
+    if (!touchControls) return;
 
     if (game.phaseMode === 'touhou') {
-        upBtn.classList.remove('hidden');
-        downBtn.classList.remove('hidden');
-        upBtnLeft.classList.remove('hidden');
-        downBtnLeft.classList.remove('hidden');
+        touchControls.classList.remove('dodge-mode');
     } else {
-        upBtn.classList.add('hidden');
-        downBtn.classList.add('hidden');
-        upBtnLeft.classList.add('hidden');
-        downBtnLeft.classList.add('hidden');
+        touchControls.classList.add('dodge-mode');
     }
 }
 
@@ -961,10 +952,9 @@ export function init() {
 
     // Main menu buttons
     document.getElementById('startBtn').addEventListener('click', () => startGame());
-    // 66 seconds = 1:06
-    document.getElementById('skipBtn').addEventListener('click', () => startGameAt(66000));
-    // 85 seconds = 1:25
-    document.getElementById('skip125Btn').addEventListener('click', () => startGameAt(85000));
+    // Skip buttons commented out
+    // document.getElementById('skipBtn').addEventListener('click', () => startGameAt(66000));
+    // document.getElementById('skip125Btn').addEventListener('click', () => startGameAt(85000));
     const creditsBtn = document.getElementById('creditsBtn');
     if (creditsBtn) {
         creditsBtn.addEventListener('click', () => {
@@ -1047,7 +1037,8 @@ export function init() {
             fullscreenBtn.title = isFullscreen ? 'Exit Fullscreen' : 'Fullscreen';
         }
         if (menuFullscreenBtn) {
-            menuFullscreenBtn.textContent = isFullscreen ? 'EXIT FULLSCREEN' : 'FULLSCREEN';
+            menuFullscreenBtn.textContent = isFullscreen ? '⛶' : '⛶';
+            menuFullscreenBtn.title = isFullscreen ? 'Exit Fullscreen' : 'Fullscreen';
         }
     };
 
