@@ -11,10 +11,10 @@ export class Player {
         this.color = '#4ecca3';
 
         // Smooth movement properties
-        this.velocity = 5;
-        this.maxSpeed = 30;        // Maximum movement speed (pixels per frame)
-        this.acceleration = 4;   // How fast to accelerate
-        this.friction = 0.5;      // Deceleration when not moving (0-1, lower = more friction)
+        this.velocity = 0;
+        this.maxSpeed = 20;        // Maximum movement speed (pixels per frame)
+        this.acceleration = 1.8;   // How fast to accelerate
+        this.friction = 0.7;      // Deceleration when not moving (0-1, lower = more friction)
 
         // Input tracking (set by input handlers)
         this.movingLeft = false;
