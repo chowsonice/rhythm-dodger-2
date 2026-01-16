@@ -504,6 +504,7 @@ body {
     border-radius: 2px;
     outline: none;
     cursor: pointer;
+    opacity: 0;
 }
 
 .dodge-slider #playerSlider::-webkit-slider-thumb {
